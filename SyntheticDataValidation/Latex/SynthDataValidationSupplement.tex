@@ -40,7 +40,7 @@
 
 \vspace{20pt}
 
-The following graphs and tables are excerpted from work done by the Synthetic Data Team at Duke University to validate the DIBBS synthetic federal employee data set with corresponding authentic data supplied by the U.S. Office of Personnel Management (OPM).\footnote{A complete description of both data sets and sources is available in the main document that the current document supplements.}  The selection here highlights two and three level covariate relationships, especially involving important research variables such as sex, race, age, education, agency, occupation, year, and pay.  In assessing similarity of the data sets, emphasis is placed on utility, or the degree to which answers to meaningful research questions obtained from use of synthetic data agree with those from use of corresponding authentic data.  Graphs and tables representing synthetic data contain the text ``DIBBS" while those for authentic data contain either ``OPM" or ``JdF."\footnote{``JdF" is nomenclature for a particular FOIA request that resulted in receipt of authentic data from OPM, which was used to generate synthetic data.}
+The following graphs and tables are excerpted from work done by the Synthetic Data Team at Duke University to validate the DIBBS synthetic federal employee data set with corresponding authentic data supplied by the U.S. Office of Personnel Management (OPM).\footnote{A complete description of both data sets and sources is available in the main document that the current document supplements.}  The selection here highlights two and three level covariate relationships, especially involving important research variables such as sex, race, age, education, agency, occupation, year, and pay.  In assessing similarity of the data sets, emphasis is placed on utility, or the degree to which answers to meaningful research questions obtained from use of synthetic data agree with those from use of corresponding authentic data.  Graphs and tables representing synthetic data contain the text ``DIBBS" while those for authentic data contain either ``OPM" or ``JdF."\footnote{``JdF" is nomenclature for a particular FOIA request that resulted in receipt of authentic data from OPM, which was used to generate synthetic data.}  All codes and definitions are taken from the U.S. Office of Personnel Management Guide to Data Standards \citep{OPMGDS}.  For additional information and guidance on use and interpretation of data made available by OPM, see \citep{OPMDataAnalysisDocumentation}.\\
 
 \vspace{0.5in}
 
@@ -70,28 +70,28 @@ Observation:  Proximity of all points to slope 1.0 reference line indicates agre
     \begin{subfigure}{.5\textwidth}
         \centering
         \includegraphics[width=3in, trim={0 0.25in 0 1in}, clip]{JdFDIBBSCorrelationInteraction-x-Female.png}
-        \caption{Correlations involving Sex}
+        \caption{Correlations involving sex}
         %\label{figure:}
         \vspace{10pt}
     \end{subfigure}% suppress line break
     \begin{subfigure}{.5\textwidth}
         \centering
         \includegraphics[width=3in, trim={0 0.25in 0 1in}, clip]{JdFDIBBSCorrelationInteraction-Race.png}
-        \caption{Correlations involving Race}
+        \caption{Correlations involving race}
         %\label{figure:}
         \vspace{10pt}
     \end{subfigure}
     \begin{subfigure}{.5\textwidth}
         \centering
         \includegraphics[width=3in, trim={0 0.25in 0 1in}, clip]{JdFDIBBSCorrelationInteraction-Agency.png}
-        \caption{Correlations involving Agency}
+        \caption{Correlations involving agency}
         %\label{figure:}
         \vspace{10pt}
     \end{subfigure}% suppress line break
     \begin{subfigure}{.5\textwidth}
         \centering
         \includegraphics[width=3in, trim={0 0.25in 0 1in}, clip]{JdFDIBBSCorrelationInteraction-Occupation.png}
-        \caption{Correlations involving Occupation}
+        \caption{Correlations involving occupation}
         %\label{figure:}
         \vspace{10pt}
     \end{subfigure}
@@ -162,17 +162,17 @@ Figures \ref{figure:CMFOccupationPayPlan1} and \ref{figure:CMFOccupationPayPlan2
 
 \clearpage
 
-MARGINAL DISTRIBUTION OF BASIC PAY\\
+DISTRIBUTION OF BASIC PAY BY AGENCY\\
 
-Basic pay is an important dependent study variable and the distribution of pay values in the authentic data must be maintained in the synthetic data.  Figure \ref{figure:JdFDIBBSBasicPayDistribution} plots the distribution of basic pay for the top eight frequency agencies (first two positions):  Department of Agriculture (AG), Department of Justice (DJ), Department of Health and Human Services (HE), Department of Homeland Security (HS), Department of Interior (IN), Department of Transportation (TD), Department of Treasury (TR), and the Department of Veterans Affairs.  These agencies account for approximately 85\% of observations.  Synthetic distribution (dashed line)  is overlayed on authentic distribution (solid line).  ``n(D)" indicates synthetic data observation frequency, ``n(J)" indicates authentic data observation count.\\
+Basic pay is an important dependent study variable and the distribution of pay values in the authentic data must be maintained in the synthetic data.  Figure \ref{figure:JdFDIBBSBasicPayDistribution} plots the distribution of basic pay for the top eight frequency agencies (first two positions):  Department of Agriculture (AG), Department of Justice (DJ), Department of Health and Human Services (HE), Department of Homeland Security (HS), Department of Interior (IN), Department of Transportation (TD), Department of Treasury (TR), and the Department of Veterans Affairs (VA).  These agencies account for approximately 85\% of observations.  Synthetic distribution represented by dashed line, authentic distribution by solid line.  ``n(D)" indicates synthetic data observation frequency, ``n(J)" indicates authentic data observation count.\\
 
-Observations:  Although one line appears in each graph for each data set, a single striped-appearing line is visible, due to identical frequency proportions at each pay level. 
+Observations:  Although each data set is represented in each graph, a single striped-appearing line is visible, due to identical frequency proportions at each pay level.  Local increases, decreases, and trends in authentic distribution are accurately represented in the synthetic data. 
 
 \vspace{12pt}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=6in, trim={0 0 0 1in}, clip]{JdFDIBBSBasicPayDistribution.png}
+    \includegraphics[width=6in, trim={0 0 1in 1in}, clip]{JdFDIBBSBasicPayDistribution.png}
     \caption{Basic pay marginal distribution for top eight agencies.  Dashed line for synthetic data, solid line for authentic.}
     \label{figure:JdFDIBBSBasicPayDistribution}
 \end{figure}
@@ -259,9 +259,113 @@ Observations:  There exists near identical distribution for high frequency combi
 
 \clearpage
 
+DISTRIBUTION OF BASIC PAY BY OCCUPATION AND SUPERVISORY STATUS\\
+
+803 distinct occupations are represented in the data supplied by OPM.  To verify distribution of basic pay by occupation and supervisory status in the synthetic data, box plots consisting of a pair of authentic/synthetic distributions for each occupation were constructed.  Figures \ref{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation1} through \ref{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation3} show box plots for the first 120 occupations in order of occupation code.  Trade, or blue collar, occupations begin at code 2500.  Figures \ref{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation4} and \ref{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation5} show the distributions of the first 80 of these occupations.  Remaining occupations exhibit patterns similar to those presented.\\
+
+Observation:  Median pay and inter-quartile ranges appear consistent between data sets.  Upper tails of distributions of in the synthetic data generally appear greater than corresponding authentic distributions, particulary for trade occupations.  Note that, of the 318 trade occupations represented in the authentic data, 190 have proportion female observations less than 0.05.  Given disparity in federal employee pay by gender \citep{BoltondeFigGenderPayGap2017} and a requirement, for protection of privacy, of a degree of modification of gender and occupation in synthetic observations, differences in pay extremes may be expected.\\
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 0.75in}, clip]{JdFDIBBSBasicPaySupervisoryStatusOccupation1.png}
+        \caption{Occupations 0006 through 0082}
+        \vspace{10pt}
+    \end{subfigure}
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 0.75in}, clip]{JdFDIBBSBasicPaySupervisoryStatusOccupation21.png}
+        \caption{Occupations 0083 through 0135}
+        \vspace{10pt}
+    \end{subfigure}
+    \caption{Basic pay distribution by occupation and supervisor status.  All agencies combined.  Authentic boxes on left, synthetic on right.}
+    \label{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation1}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 0.75in}, clip]{JdFDIBBSBasicPaySupervisoryStatusOccupation41.png}
+        \caption{Occupations 0136 through 0203}
+        \vspace{10pt}
+    \end{subfigure}
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 0.75in}, clip]{JdFDIBBSBasicPaySupervisoryStatusOccupation61.png}
+        \caption{Occupations 0204 through 0302}
+        \vspace{10pt}
+    \end{subfigure}
+    \caption{Basic pay distribution by occupation and supervisor status.  All agencies combined.  Authentic boxes on left, synthetic on right.}
+    \label{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation2}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 0.75in}, clip]{JdFDIBBSBasicPaySupervisoryStatusOccupation81.png}
+        \caption{Occupations 0303 through 0346}
+        \vspace{10pt}
+    \end{subfigure}
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 0.75in}, clip]{JdFDIBBSBasicPaySupervisoryStatusOccupation101.png}
+        \caption{Occupations 0347 through 0399}
+        \vspace{10pt}
+    \end{subfigure}
+    \caption{Basic pay distribution by occupation and supervisor status.  All agencies combined.  Authentic boxes on left, synthetic on right.}
+    \label{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation3}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 0.75in}, clip]{JdFDIBBSBasicPaySupervisoryStatusOccupation481.png}
+        \caption{Occupations 2502 through 3101 (trades)}
+        \vspace{10pt}
+    \end{subfigure}
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 0.75in}, clip]{JdFDIBBSBasicPaySupervisoryStatusOccupation501.png}
+        \caption{Occupations 3103 through 3511 (trades)}
+        \vspace{10pt}
+    \end{subfigure}
+    \caption{Basic pay distribution by occupation and supervisor status.  All agencies combined.  Authentic boxes on left, synthetic on right.}
+    \label{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation4}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 0.75in}, clip]{JdFDIBBSBasicPaySupervisoryStatusOccupation521.png}
+        \caption{Occupations 3513 through 3712 (trades)}
+        \vspace{10pt}
+    \end{subfigure}
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 0.75in}, clip]{JdFDIBBSBasicPaySupervisoryStatusOccupation541.png}
+        \caption{Occupations 3725 through 3911 (trades}
+        \vspace{10pt}
+    \end{subfigure}
+    \caption{Basic pay distribution by occupation and supervisor status.  All agencies combined.  Authentic boxes on left, synthetic on right.}
+    \label{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation5}
+\end{figure}
+
+\clearpage
+
 MEAN LOG(BASIC PAY) BY GENDER, RACE, AND YEAR\\
 
-The relationship of mean basic basic pay to joint combinations of sex, race, and year is important in human capital research and must be maintained in the synthetic data.  Figure \ref{figure:RaceLogPayBySex-FY} plots mean log(pay) by year for each sex and race.  Dashed lines for synthetic data, solid lines for authentic.\\
+The relationship of mean basic basic pay to joint combinations of sex, race, and year is important in human capital research and must be maintained in the synthetic data.  Figure \ref{figure:RaceLogPayBySex-FY} plots mean log(pay) by year for females (on left) and males (on right) for races Native American (A), Asian (B), black (C), Hispanic (D), and white (E).  Dashed lines for synthetic data, solid lines for authentic.\\
 
 Observation:  Differentiating colors may not be visible, but apparent pairings of lines (dashed near solid following similar trends) form race pairs.  Although some systematic difference appears between data sets, inter-year and overall trends are very similar.
 
@@ -270,7 +374,7 @@ Observation:  Differentiating colors may not be visible, but apparent pairings o
 \begin{figure}[h!]
     \centering
     \includegraphics[width=6.5in, trim={0 0 0 0.75in}, clip]{RaceLogPayBySex-FY.png}
-    \caption{Mean basic pay by sex, race, and year.  Left figure for female (F), right figure for male (M).  Race codes:   A = native American, B = Asian, C = black, D = Hispanic, E = white.  Dashed line for synthetic data, solid line for authentic.}
+    \caption{Mean basic pay by sex, race, and year.  Female on left, male on right.  Race codes:  A = Native American, B = Asian, C = black, D = Hispanic, E = white.  Dashed line for synthetic data, solid line for authentic.}
     \label{figure:RaceLogPayBySex-FY}
 \end{figure}
 
@@ -370,5 +474,15 @@ Logistic models reveal agreement in trends between data sets.
 
 
 \end{spacing}
-  
+
+
+\newpage
+
+\begingroup
+\begin{spacing}{1.0}
+    \raggedright
+    \bibliography{DataUtilityBibliography}
+\end{spacing}
+\endgroup
+
 \end{document}

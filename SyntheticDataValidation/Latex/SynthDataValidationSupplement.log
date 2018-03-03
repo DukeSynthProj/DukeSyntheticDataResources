@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.24)  2 MAR 2018 20:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.24)  3 MAR 2018 15:25
 entering extended mode
 **./SynthDataValidationSupplement.tex
 (SynthDataValidationSupplement.tex
@@ -340,6 +340,11 @@ G,.JBIG2,.JB2,.eps]
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
@@ -505,7 +510,7 @@ File: Images/JdFDIBBSBasicPayDistribution.png Graphic file (type png)
 <use Images/JdFDIBBSBasicPayDistribution.png>
 Package pdftex.def Info: Images/JdFDIBBSBasicPayDistribution.png used on input 
 line 175.
-(pdftex.def)             Requested size: 433.62pt x 487.82132pt.
+(pdftex.def)             Requested size: 433.62pt x 557.52284pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -629,163 +634,303 @@ Underfull \hbox (badness 10000) in paragraph at lines 264--265
 
  []
 
-<Images/RaceLogPayBySex-FY.png, id=144, 578.16pt x 578.16pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
+
+ []
+
+
+<Images/JdFDIBBSBasicPaySupervisoryStatusOccupation1.png, id=144, 722.7pt x 578
+.16pt>
+File: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation1.png Graphic file (typ
+e png)
+ <use Images/JdFDIBBSBasicPaySupervisoryStatusOccupation1.png>
+Package pdftex.def Info: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation1.pn
+g used on input line 272.
+(pdftex.def)             Requested size: 433.62pt x 271.0146pt.
+
+<Images/JdFDIBBSBasicPaySupervisoryStatusOccupation21.png, id=146, 722.7pt x 57
+8.16pt>
+File: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation21.png Graphic file (ty
+pe png)
+ <use Images/JdFDIBBSBasicPaySupervisoryStatusOccupation21.png>
+Package pdftex.def Info: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation21.p
+ng used on input line 278.
+(pdftex.def)             Requested size: 433.62pt x 271.0146pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18
+
+
+
+
+
+
+
+
+] [19 <./Images/JdFDIBBSBasicPaySupervisoryStatusOccupation1.png> <./Images/JdF
+DIBBSBasicPaySupervisoryStatusOccupation21.png>]
+<Images/JdFDIBBSBasicPaySupervisoryStatusOccupation41.png, id=159, 722.7pt x 57
+8.16pt>
+File: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation41.png Graphic file (ty
+pe png)
+ <use Images/JdFDIBBSBasicPaySupervisoryStatusOccupation41.png>
+Package pdftex.def Info: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation41.p
+ng used on input line 292.
+(pdftex.def)             Requested size: 433.62pt x 271.0146pt.
+
+<Images/JdFDIBBSBasicPaySupervisoryStatusOccupation61.png, id=161, 722.7pt x 57
+8.16pt>
+File: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation61.png Graphic file (ty
+pe png)
+ <use Images/JdFDIBBSBasicPaySupervisoryStatusOccupation61.png>
+Package pdftex.def Info: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation61.p
+ng used on input line 298.
+(pdftex.def)             Requested size: 433.62pt x 271.0146pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[20 <./Images/JdFDIBBSBasicPaySupervisoryStatusOccupation41.png> <./Images/JdFD
+IBBSBasicPaySupervisoryStatusOccupation61.png>]
+<Images/JdFDIBBSBasicPaySupervisoryStatusOccupation81.png, id=170, 722.7pt x 57
+8.16pt>
+File: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation81.png Graphic file (ty
+pe png)
+ <use Images/JdFDIBBSBasicPaySupervisoryStatusOccupation81.png>
+Package pdftex.def Info: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation81.p
+ng used on input line 312.
+(pdftex.def)             Requested size: 433.62pt x 271.0146pt.
+
+<Images/JdFDIBBSBasicPaySupervisoryStatusOccupation101.png, id=172, 722.7pt x 5
+78.16pt>
+File: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation101.png Graphic file (t
+ype png)
+ <use Images/JdFDIBBSBasicPaySupervisoryStatusOccupation101.png>
+Package pdftex.def Info: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation101.
+png used on input line 318.
+(pdftex.def)             Requested size: 433.62pt x 271.0146pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+<Images/JdFDIBBSBasicPaySupervisoryStatusOccupation481.png, id=174, 722.7pt x 5
+78.16pt>
+File: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation481.png Graphic file (t
+ype png)
+ <use Images/JdFDIBBSBasicPaySupervisoryStatusOccupation481.png>
+Package pdftex.def Info: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation481.
+png used on input line 330.
+(pdftex.def)             Requested size: 433.62pt x 271.0146pt.
+
+<Images/JdFDIBBSBasicPaySupervisoryStatusOccupation501.png, id=176, 722.7pt x 5
+78.16pt>
+File: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation501.png Graphic file (t
+ype png)
+ <use Images/JdFDIBBSBasicPaySupervisoryStatusOccupation501.png>
+Package pdftex.def Info: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation501.
+png used on input line 336.
+(pdftex.def)             Requested size: 433.62pt x 271.0146pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21 <./Images/JdFDIBBSBasicPaySupervisoryStatusOccupation81.png> <./Images/JdFD
+IBBSBasicPaySupervisoryStatusOccupation101.png>] [22 <./Images/JdFDIBBSBasicPay
+SupervisoryStatusOccupation481.png> <./Images/JdFDIBBSBasicPaySupervisoryStatus
+Occupation501.png>]
+<Images/JdFDIBBSBasicPaySupervisoryStatusOccupation521.png, id=192, 722.7pt x 5
+78.16pt>
+File: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation521.png Graphic file (t
+ype png)
+ <use Images/JdFDIBBSBasicPaySupervisoryStatusOccupation521.png>
+Package pdftex.def Info: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation521.
+png used on input line 350.
+(pdftex.def)             Requested size: 433.62pt x 271.0146pt.
+
+<Images/JdFDIBBSBasicPaySupervisoryStatusOccupation541.png, id=194, 722.7pt x 5
+78.16pt>
+File: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation541.png Graphic file (t
+ype png)
+ <use Images/JdFDIBBSBasicPaySupervisoryStatusOccupation541.png>
+Package pdftex.def Info: Images/JdFDIBBSBasicPaySupervisoryStatusOccupation541.
+png used on input line 356.
+(pdftex.def)             Requested size: 433.62pt x 271.0146pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[23 <./Images/JdFDIBBSBasicPaySupervisoryStatusOccupation521.png> <./Images/JdF
+DIBBSBasicPaySupervisoryStatusOccupation541.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--369
+
+ []
+
+<Images/RaceLogPayBySex-FY.png, id=203, 578.16pt x 578.16pt>
 File: Images/RaceLogPayBySex-FY.png Graphic file (type png)
 
 <use Images/RaceLogPayBySex-FY.png>
-Package pdftex.def Info: Images/RaceLogPayBySex-FY.png used on input line 272.
+Package pdftex.def Info: Images/RaceLogPayBySex-FY.png used on input line 376.
 (pdftex.def)             Requested size: 469.75499pt x 425.71442pt.
- [18
-
-
-
-
+ [24
 
 
 
 
  <./Images/RaceLogPayBySex-FY.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 279--280
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--282
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
 
  []
 
 
-<Images/GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06.png, id=151,
+<Images/GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06.png, id=210,
  578.16pt x 722.7pt>
 File: Images/GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06.png Gra
 phic file (type png)
 
 <use Images/GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06.png>
 Package pdftex.def Info: Images/GenderPayDifferentialQuantileRegressionAgeRaceE
-dPanelv0-06.png used on input line 289.
+dPanelv0-06.png used on input line 393.
 (pdftex.def)             Requested size: 433.62pt x 460.72012pt.
 
-[19
+[25
 
  <./Images/GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--299
+Underfull \hbox (badness 10000) in paragraph at lines 402--403
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
 
  []
 
 
-<Images/GenderProportionLogisticModelEducationRaceFYScaleFixedv0-06.png, id=159
+<Images/GenderProportionLogisticModelEducationRaceFYScaleFixedv0-06.png, id=218
 , 578.16pt x 578.16pt>
 File: Images/GenderProportionLogisticModelEducationRaceFYScaleFixedv0-06.png Gr
 aphic file (type png)
 
 <use Images/GenderProportionLogisticModelEducationRaceFYScaleFixedv0-06.png>
 Package pdftex.def Info: Images/GenderProportionLogisticModelEducationRaceFYSca
-leFixedv0-06.png used on input line 306.
+leFixedv0-06.png used on input line 410.
 (pdftex.def)             Requested size: 469.75499pt x 411.03462pt.
 
-[20
+[26
 
  <./Images/GenderProportionLogisticModelEducationRaceFYScaleFixedv0-06.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 417--418
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--316
+Underfull \hbox (badness 10000) in paragraph at lines 419--420
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--318
+Underfull \hbox (badness 10000) in paragraph at lines 421--422
 
  []
 
 
-<Images/GenderProportionLogisticModelFYRaceAgeAv0-06.png, id=166, 578.16pt x 57
+<Images/GenderProportionLogisticModelFYRaceAgeAv0-06.png, id=225, 578.16pt x 57
 8.16pt>
 File: Images/GenderProportionLogisticModelFYRaceAgeAv0-06.png Graphic file (typ
 e png)
  <use Images/GenderProportionLogisticModelFYRaceAgeAv0-06.png>
 Package pdftex.def Info: Images/GenderProportionLogisticModelFYRaceAgeAv0-06.pn
-g used on input line 325.
+g used on input line 429.
 (pdftex.def)             Requested size: 469.75499pt x 411.03462pt.
- [21
+ [27
 
  <./Images/GenderProportionLogisticModelFYRaceAgeAv0-06.png>]
-<Images/GenderProportionLogisticModelFYRaceAgeBv0-06.png, id=173, 578.16pt x 57
+<Images/GenderProportionLogisticModelFYRaceAgeBv0-06.png, id=232, 578.16pt x 57
 8.16pt>
 File: Images/GenderProportionLogisticModelFYRaceAgeBv0-06.png Graphic file (typ
 e png)
  <use Images/GenderProportionLogisticModelFYRaceAgeBv0-06.png>
 Package pdftex.def Info: Images/GenderProportionLogisticModelFYRaceAgeBv0-06.pn
-g used on input line 334.
+g used on input line 438.
 (pdftex.def)             Requested size: 469.75499pt x 411.03462pt.
- [22
+ [28
 
  <./Images/GenderProportionLogisticModelFYRaceAgeBv0-06.png>]
-<Images/GenderProportionLogisticModelFYRaceAgeCv0-06.png, id=180, 578.16pt x 57
+<Images/GenderProportionLogisticModelFYRaceAgeCv0-06.png, id=239, 578.16pt x 57
 8.16pt>
 File: Images/GenderProportionLogisticModelFYRaceAgeCv0-06.png Graphic file (typ
 e png)
  <use Images/GenderProportionLogisticModelFYRaceAgeCv0-06.png>
 Package pdftex.def Info: Images/GenderProportionLogisticModelFYRaceAgeCv0-06.pn
-g used on input line 343.
+g used on input line 447.
 (pdftex.def)             Requested size: 469.75499pt x 411.03462pt.
- [23
+ [29
 
  <./Images/GenderProportionLogisticModelFYRaceAgeCv0-06.png>]
-<Images/GenderProportionLogisticModelFYRaceAgeDv0-06.png, id=187, 578.16pt x 57
+<Images/GenderProportionLogisticModelFYRaceAgeDv0-06.png, id=246, 578.16pt x 57
 8.16pt>
 File: Images/GenderProportionLogisticModelFYRaceAgeDv0-06.png Graphic file (typ
 e png)
  <use Images/GenderProportionLogisticModelFYRaceAgeDv0-06.png>
 Package pdftex.def Info: Images/GenderProportionLogisticModelFYRaceAgeDv0-06.pn
-g used on input line 352.
+g used on input line 456.
 (pdftex.def)             Requested size: 469.75499pt x 411.03462pt.
- [24
+ [30
 
  <./Images/GenderProportionLogisticModelFYRaceAgeDv0-06.png>]
-<Images/GenderProportionLogisticModelFYRaceAgeEv0-06.png, id=194, 578.16pt x 57
+<Images/GenderProportionLogisticModelFYRaceAgeEv0-06.png, id=253, 578.16pt x 57
 8.16pt>
 File: Images/GenderProportionLogisticModelFYRaceAgeEv0-06.png Graphic file (typ
 e png)
  <use Images/GenderProportionLogisticModelFYRaceAgeEv0-06.png>
 Package pdftex.def Info: Images/GenderProportionLogisticModelFYRaceAgeEv0-06.pn
-g used on input line 361.
+g used on input line 465.
 (pdftex.def)             Requested size: 469.75499pt x 411.03462pt.
- [25
+ [31
 
  <./Images/GenderProportionLogisticModelFYRaceAgeEv0-06.png>]
-(SynthDataValidationSupplement.aux) ) 
+(SynthDataValidationSupplement.bbl) [32
+
+] (SynthDataValidationSupplement.aux) ) 
 Here is how much of TeX's memory you used:
- 4483 strings out of 493323
- 72755 string characters out of 3130015
- 139082 words of memory out of 3000000
- 7929 multiletter control sequences out of 15000+200000
- 13926 words of font info for 49 fonts, out of 3000000 for 9000
+ 4556 strings out of 493323
+ 76337 string characters out of 3130015
+ 139295 words of memory out of 3000000
+ 7988 multiletter control sequences out of 15000+200000
+ 14401 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,39p,1205b,498s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/tjb48/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tjb48/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tjb48/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Use
-rs/tjb48/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.
-pfb><C:/Users/tjb48/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb><C:/Users/tjb48/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmr9.pfb>
-Output written on SynthDataValidationSupplement.pdf (25 pages, 2085902 bytes).
+ 39i,8n,39p,1451b,498s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/tjb48/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tjb48/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tjb48
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
+/Users/tjb48/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr6.pfb><C:/Users/tjb48/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr7.pfb><C:/Users/tjb48/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr8.pfb><C:/Users/tjb48/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/tjb48/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on SynthDataValidationSupplement.pdf (32 pages, 2764002 bytes).
 PDF statistics:
- 222 PDF objects out of 1000 (max. 8388607)
+ 292 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 314 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 424 words of extra memory for PDF output out of 10000 (max. 10000000)
 
