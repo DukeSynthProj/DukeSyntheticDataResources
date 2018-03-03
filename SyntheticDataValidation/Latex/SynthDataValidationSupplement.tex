@@ -263,7 +263,7 @@ DISTRIBUTION OF BASIC PAY BY OCCUPATION AND SUPERVISORY STATUS\\
 
 803 distinct occupations are represented in the data supplied by OPM.  To verify distribution of basic pay by occupation and supervisory status in the synthetic data, box plots consisting of a pair of authentic/synthetic distributions for each occupation were constructed.  Figures \ref{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation1} through \ref{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation3} show box plots for the first 120 occupations in order of occupation code.  Trade, or blue collar, occupations begin at code 2500.  Figures \ref{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation4} and \ref{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation5} show the distributions of the first 80 of these occupations.  Remaining occupations exhibit patterns similar to those presented.\\
 
-Observation:  Median pay and inter-quartile ranges appear consistent between data sets.  Upper tails of distributions of in the synthetic data generally appear greater than corresponding authentic distributions, particulary for trade occupations.  Note that, of the 318 trade occupations represented in the authentic data, 190 have proportion female observations less than 0.05.  Given disparity in federal employee pay by gender \citep{BoltondeFigGenderPayGap2017} and a requirement, for protection of privacy, of a degree of modification of gender and occupation in synthetic observations, differences in pay extremes may be expected.\\
+Observations:  Median pay and inter-quartile ranges appear consistent between data sets.  Upper tails of distributions of in the synthetic data generally appear greater than corresponding authentic distributions, particulary for trade occupations.  Note that, of the 318 trade occupations represented in the authentic data, 190 have proportion female observations less than 0.05.  Given disparity in federal employee pay by gender \citep{BoltondeFigGenderPayGap2017} and a requirement, for protection of privacy, of a degree of modification of gender and occupation in synthetic observations, differences in pay extremes may be expected.\\
 
 \begin{figure}[h]
     \centering
@@ -469,9 +469,106 @@ Logistic models reveal agreement in trends between data sets.
 
 \clearpage
 
+GENDER PROPORTION BY OCCUPATION\\
 
+In the data supplied by OPM, 205 occupations (more than 25\%) have proportion female observations below 0.05.  12 have proportion female observations greater than 0.95.  Of these occupations, 148 have fewer than 1,000 total observations and 30 haver fewer than 10 observations.  This presents challenges for accurate representation of authentic proportions in synthetic observations, while reducing the risk of individual employee identification.  Figures \ref{figure:JdFDIBBSOccupationProportionBar1} and \ref{figure:JdFDIBBSOccupationProportionBar2} compare proportion female for the first 120 occupation codes.  Figures \ref{figure:JdFDIBBSOccupationProportionBar3} and \ref{figure:JdFDIBBSOccupationProportionBar4} compare proportions for the first 120 trade occupations, which begin at code 2500.  ``n-DIBBS" indicates synthetic observation count, ``n-JdF" indicates corresponding authentic observation count.\\
 
+Observation:  Agreement for large count occupations is indicated by proximity of points.  Departure increases with decrease in observation count.  Trade occupations, having generally low observation count and low proportion female in the authentic data, exhibit greater discrepancies than those observed in non-trade occupations. 
 
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 1in}, clip]{JdFDIBBSOccupationProportionBar1.png}
+        \caption{Occupations 0006 through 0135}
+        \vspace{10pt}
+    \end{subfigure}
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 1in}, clip]{JdFDIBBSOccupationProportionBar41.png}
+        \caption{Occupations 0136 through 0302}
+        \vspace{10pt}
+    \end{subfigure}
+    \caption{Proportion female observations by occupation.  All agencies combined.  One synthetic and one authentic point per occupation.}
+    \label{figure:JdFDIBBSOccupationProportionBar1}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 1in}, clip]{JdFDIBBSOccupationProportionBar81.png}
+        \caption{Occupations 0303 through 0399}
+        \vspace{10pt}
+    \end{subfigure}
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 1in}, clip]{JdFDIBBSOccupationProportionBar121.png}
+        \caption{Occupations 0401 through 0512}
+        \vspace{10pt}
+    \end{subfigure}
+    \caption{Proportion female observations by occupation.  All agencies combined.  One synthetic and one authentic point per occupation.}
+    \label{figure:JdFDIBBSOccupationProportionBar2}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 1in}, clip]{JdFDIBBSOccupationProportionBar481.png}
+        \caption{Occupations 2502 through 3511 (trades)}
+        \vspace{10pt}
+    \end{subfigure}
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 1in}, clip]{JdFDIBBSOccupationProportionBar521.png}
+        \caption{Occupations 3513 through 3911 (trades)}
+        \vspace{10pt}
+    \end{subfigure}
+    \caption{Proportion female observations by occupation.  All agencies combined.  One synthetic and one authentic point per occupation.}
+    \label{figure:JdFDIBBSOccupationProportionBar3}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 1in}, clip]{JdFDIBBSOccupationProportionBar561.png}
+        \caption{Occupations 3940 through 4605 (trades)}
+        \vspace{10pt}
+    \end{subfigure}
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 1in 0 1in}, clip]{JdFDIBBSOccupationProportionBar601.png}
+        \caption{Occupations 4607 through 5306 (trades)}
+        \vspace{10pt}
+    \end{subfigure}
+    \caption{Proportion female observations by occupation.  All agencies combined.  One synthetic and one authentic point per occupation.}
+    \label{figure:JdFDIBBSOccupationProportionBar4}
+\end{figure}
+
+\clearpage
+
+OCCUPATION GENDER PROPORTION KERNEL DISTRIBUTION\\
+
+Figure \ref{figure:JdFDIBBSProportionFemaleDistributionByOccupation-v0-06} superimposes synthetic and authentic kernel density plots of proportion female employees by occupation.\\
+
+Observations:  Trade occupations in authentic data are slightly over-represented for proportions near zero and above 0.75.  There is slight discrepancy in synthetic proportions near 0 and above 0.75, which is compensated for near central proportions.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6in, trim={0 0 0 1in}, clip]{JdFDIBBSProportionFemaleDistributionByOccupation-v0-06.png}
+    \caption{Occupation proportion female kernel density.  Synthetic and authentic distributions superimposed.  Trade occupations slightly over-represented near zero and above 0.75 in authentic data.  Slight discrepancy in synthetic proportions at extremes.  Compensated for near central proportions.}
+    \label{figure:JdFDIBBSProportionFemaleDistributionByOccupation-v0-06}
+\end{figure}
+
+\clearpage
 
 \end{spacing}
 
