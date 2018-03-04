@@ -166,13 +166,11 @@ DISTRIBUTION OF BASIC PAY BY AGENCY\\
 
 Basic pay is an important dependent study variable and the distribution of pay values in the authentic data must be maintained in the synthetic data.  Figure \ref{figure:JdFDIBBSBasicPayDistribution} plots the distribution of basic pay for the top eight frequency agencies (first two positions):  Department of Agriculture (AG), Department of Justice (DJ), Department of Health and Human Services (HE), Department of Homeland Security (HS), Department of Interior (IN), Department of Transportation (TD), Department of Treasury (TR), and the Department of Veterans Affairs (VA).  These agencies account for approximately 85\% of observations.  Synthetic distribution represented by dashed line, authentic distribution by solid line.  ``n(D)" indicates synthetic data observation frequency, ``n(J)" indicates authentic data observation count.\\
 
-Observations:  Although each data set is represented in each graph, a single striped-appearing line is visible, due to identical frequency proportions at each pay level.  Local increases, decreases, and trends in authentic distribution are accurately represented in the synthetic data. 
+Observations:  Although each data set is represented in each graph, a single striped-appearing line is visible, due to identical frequency proportions at each pay level.  Local increases, decreases, and trends in authentic distribution are accurately represented in the synthetic data.\\
 
-\vspace{12pt}
-
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=6in, trim={0 0 1in 1in}, clip]{JdFDIBBSBasicPayDistribution.png}
+    \includegraphics[width=4.5in, trim={0 0 1in 1in}, clip]{JdFDIBBSBasicPayDistribution.png}
     \caption{Basic pay marginal distribution for top eight agencies.  Dashed line for synthetic data, solid line for authentic.}
     \label{figure:JdFDIBBSBasicPayDistribution}
 \end{figure}
@@ -569,6 +567,96 @@ Observations:  Trade occupations in authentic data are slightly over-represented
 \end{figure}
 
 \clearpage
+
+GENDER PROPORTION LOGISTIC REGRESSION CLASSIFIER FOR TRADE OCCUPATIONS\\
+
+A gender classifier for occupations with code greater 2500 (trades) using the logistic regression model
+\begin{center} $\mest{p}=f(\mest{\beta}_{race}race+\mest{\beta}_{age}age+\mest{\beta}_{age^2}age^2+
+    \mest{\beta}_{ed}ed+\mest{\beta}_{ed^2}ed^2+\mest{\beta}_{occ}occ)$,\\
+\end{center}
+where $f()$ estimates proportion female observations by race, age, education, and occupation, was used to classify sex, such that all observations associated with combinations of independent variables with $\mest{p}\ge$0.5 are classified as female.  Figure \ref{figure:GenderProportionROCAgeAgeSqEdEdSqRaceOccGE2500ByFYv0-06} plots, for fiscal years 1988-2011 (all years supplied by OPM) and $\mest{p}$ values from 0 to 1.0, the proportion of accurate female observation classification (y-axis) against the proportion accurate male classification (x-axis).\\
+
+Observation:  Although the classifiers, exhibiting somewhat flat ROC curves (near the $\mest{p}$=0.5 reference line of slope 1.0) appear to be of limited utility, those derived from synthetic data are nearly identical their counterparts derived from authentic data, including an apparent reduction in utility (nearer to the reference line) as fiscal years advance.  Incidentally, the reduced utility with year may reflect structural changes in proportion female for trade occupations during this period.\\
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=5in, trim={0 0.75in 0 1in}, clip]{GenderProportionROCAgeAgeSqEdEdSqRaceOccGE2500ByFYv0-06.png}
+    \caption{Proportion female race, age, education, occupation classifier ROC curves.  One curve per data set per by fiscal.  Agreement in classifier accuracy indicated by overlapping curves. Pattern of decreased accuracy as years progress captured in both data sets. }
+    \label{figure:GenderProportionROCAgeAgeSqEdEdSqRaceOccGE2500ByFYv0-06}
+\end{figure}
+
+\clearpage
+
+The next sections (each beginning with ``THE RISE OF GRADE IN THE FED GOVT") use results from \cite{BoltondeFigGradeInflation2016}.  Each compares the fit of actual research models to corresponding sub-sets of synthetic and authentic data.  Some figures include graphs that were constructed using corresponding data from OPM's on-line FedScope data repository \citep{OPMFedScope}.\\
+
+THE RISE OF GRADE IN THE FED GOVT:  WAGE BILL DECOMPOSITION\\
+
+Figure \ref{figure:WageChangePromotionVsFYAllPayPlans} shows the annual change in the total federal employee wage bill categorized by source:  change in grade, change in step rate, and other changes.  Synthetic data are represented by a dashed line, authentic data by a solid line.\\
+
+Observation:  Although highly aggregated, each graph is informative and the synthetic data provide near identical insight into overall wage change patterns as do the authentic data.\\
+
+\vspace{12pt}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=6in, trim={0 0.6in 0 1.5in}, clip]{WageChangePromotionVsFYAllPayPlans.png}
+    \caption{Change in U.S. federal government total wage bill.  Millions of 2011 dollars by change in grade, change in step rate, and other changes.  Fiscal years 1988 through 2011. }
+    \label{figure:WageChangePromotionVsFYAllPayPlans}
+\end{figure}
+
+\clearpage
+
+THE RISE OF GRADE IN THE FED GOVT:  CHANGE IN GS GRADE DISTRIBUTION 2011 vs. 1988\\
+
+The GS pay plan represents approximately 80\% of the observations in the data provided by OPM.  Accordingly, change in distribution of grade within this pay plan is an important consideration when conducting human capital research with these data.  Figure \ref{figure:GSGradeDistribution1988-2011} shows the change in grade distribution from fiscal years 1988 (solid line) to 2011 (dashed line).\\
+
+Observation:  Although highly aggregated, each graph is informative and the synthetic data provide near identical insight into overall change patterns as do the authentic data.\\
+
+\vspace{12pt}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=6in, trim={0 0.6in 0 0.6in}, clip]{GSGradeDistribution1988-2011.png}
+    \caption{Change in GS grade distribution.  Fiscal years 1988 (solid line) and 2011 (dashed line).  Near identical distribution in synthetic and authentic data.}
+    \label{figure:GSGradeDistribution1988-2011}
+\end{figure}
+
+\clearpage
+
+THE RISE OF GRADE IN THE FED GOVT:  90/10 PAY PERCENTILE RATIO\\
+
+In addition to a general increase in wages over their study period, Bolton and de Figueiredo show, for the GS pay plan, that wages for employees at the top end increased at a greater rate than for lower paid employees.  Figure \ref{figure:BasicPayQuantile9010Ratio} plots the ratio of 90th and 10th basic pay percentiles for the GS pay plan, grade less than or equal to 15.  Synthetic data are represented by a dashed line, authentic data by a solid line.\\
+
+Observations:  The rise of nearly 0.2 measured in the authentic data is informative and, along with very close tracking of local trends throughout the period, is apparent in the synthetic data.\\
+
+\vspace{12pt}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=6in, trim={0 0.6in 0 1in}, clip]{BasicPayQuantile9010Ratio.png}
+    \caption{Ratio of 90th and 10th basic pay percentiles by year.  GS pay plan, grade $leq$ 15.  Synthetic data dashed line, authentic data solid.}
+    \label{figure:BasicPayQuantile9010Ratio}
+\end{figure}
+
+\clearpage
+
+THE RISE OF GRADE IN THE FED GOVT:  BASIC PAY QUANTILE REGRESSION\\
+
+Ordinary least squares regression estimates expected values, given levels of independent, or predictor, variables.  Of interest with distribution of income are quantiles, or an estimate pay below which a given proportion of observations are observed. Figure \ref{figure:BasicPayQuantileYearRegression} plots, for pay plan GS, grade less than or equal to 15, the slopes estimated from the simple linear quantile regression of the logarithm of basic pay on fiscal year (1988-2011).  These slopes represent change in corresponding quantile per year.  One model fit for each quantile from 0.1 through 0.9 in 0.1 increments.  Synthetic data are represented by a dashed line, authentic data by a solid line.\\
+
+Observation:  Similar trends in slope of log(pay) quantile with respect to year are revealed by both data sets.\\
+
+\vspace{12pt}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=6in, trim={0 0.6in 0 1in}, clip]{BasicPayQuantileYearRegression.png}
+    \caption{Coefficients (change per year) from quantile regression of log(pay) on year.  GS pay plan, grade $\leq$ 15.  1988-2011.  Synthetic data dashed line, authentic data solid.}
+    \label{figure:BasicPayQuantileYearRegression}
+\end{figure}
+
+\clearpage
+
 
 \end{spacing}
 
