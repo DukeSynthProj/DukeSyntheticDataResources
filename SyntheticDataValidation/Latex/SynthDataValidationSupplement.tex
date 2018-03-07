@@ -6,6 +6,14 @@
 \usepackage{titlesec}
 \titleformat*{\section}{\large\bfseries}
 \titleformat*{\subsection}{\normalsize}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    %linkcolor=,
+    %citecolor=blue,
+    %urlcolor=blue
+    allcolors=[rgb]{0, 0, 0.7}
+}
 \usepackage{amsmath}   % includes \boldmath(), \boldsymbol{()}
 \usepackage{bm}        % math fonts, \boldmath{}, \boldsymbol{}
 \usepackage{graphicx}
@@ -173,7 +181,7 @@ Observation:  Proximity of all points to the slope 1.0 reference line indicates 
 
 \section{Cumulative Mass (Proportion Observations) by Pay Plan and Occupation}
 
-Figures \ref{figure:CMFOccupationPayPlan1} and \ref{figure:CMFOccupationPayPlan2} contain example CMF plots of pay plan and occupation combinations.  All occupations within each pay plan are represented.  Solid line for authentic data, dashed line for synthetic.  Overlapping or nearness of lines indicates equality of cumulative mass for corresponding levels of occupation within pay plan.  ``nJ" indicates observation count in authentic data, ``nD" indicates synthetic data observation count.  Near identical distribution is observed for high frequency pay plans GS, WG, GM, and VN, which account for more than 95\% of observations, indicating overall close agreement between data sets.  Increasing departure observed as number of observations decreases.\\
+Figures \ref{figure:CMFOccupationPayPlan1} and \ref{figure:CMFOccupationPayPlan2} contain example cumulative mass plots for joint combinations of pay plan and occupation.  All occupations within each pay plan are represented.  Solid line for authentic data, dashed line for synthetic.  Overlapping or nearness of lines indicates equality of cumulative mass for corresponding levels of occupation within pay plan.  ``nJ" indicates observation count in authentic data, ``nD" indicates synthetic data observation count.  Near identical distribution is observed for high frequency pay plans GS, WG, GM, and VN, which account for more than 95\% of observations, indicating overall close agreement between data sets.  Increasing departure observed as number of observations decreases.\\
 
 \begin{figure}[h]
     \centering
@@ -194,6 +202,8 @@ Figures \ref{figure:CMFOccupationPayPlan1} and \ref{figure:CMFOccupationPayPlan2
 \clearpage
 
 \section{Distribution of Basic Pay}
+
+Basic pay is an important dependent study variable and the distribution of pay values in the authentic data must be maintained in the synthetic data.\footnote{Basic pay is determined by pay plan, grade, and step rate and does not include adjustments such as for locale.} \footnote{Due to inflation, the value of wages earned is variable, typically decreasing by year.  To compensate for this, and to make inter-year values comparable, pay values throughout the entire document are adjusted to 2011 dollars using annual consumer price indices.}
 
 \subsection{Distribution of Basic Pay by Agency}
 
@@ -394,7 +404,7 @@ Observations:  Median pay and inter-quartile ranges appear consistent between da
 
 \clearpage
 
-\subsection{Mean log(basic Pay) by Gender, Race, and Year}
+\subsection{Mean log(basic pay) by Gender, Race, and Year}
 
 The relationship of mean basic basic pay to joint combinations of sex, race, and year is important in human capital research and must be maintained in the synthetic data.  Figure \ref{figure:RaceLogPayBySex-FY} plots mean log(pay) by year for females (on left) and males (on right) for races Native American (A), Asian (B), black (C), Hispanic (D), and white (E).  Dashed lines for synthetic data, solid lines for authentic.\\
 
@@ -411,9 +421,11 @@ Observation:  Differentiating colors may not be visible, but apparent pairings o
 
 \section{Distribution of Gender}
 
+Disparities in pay, job placement, and promotion with respect to gender are important and common topics in human capital research.  For synthetic data to produce meaningful results, proportion observations by gender must reflect those observed in corresponding authentic data.  This section compares proportions by gender using joint combinations of important organizational and human capital variables.
+
 \subsection{Gender Proportion by Race, Education, and Year}
 
-Accurate proportion observations by gender is critical in reproducing authentic results using models involving gender effects.  Figure \ref{figure:GenderProportionLogisticModelEducationRaceFYScaleFixedv0-06} plots proportion female employees by race, education, and year.  Fitted lines are logistic regression models.\\
+Accurate proportion observations by gender is critical in reproducing authentic results with models that include gender as an independent variable.  Figure \ref{figure:GenderProportionLogisticModelEducationRaceFYScaleFixedv0-06} plots proportion female employees by race, education, and year.  Fitted lines are logistic regression models.\\
 
 Observation:  This four-way comparison (sex, race, education, and year) confirms good representation in synthetic data of gender proportion among important variable combinations in the authentic data.  Fitted logistic regression models have nearly identical trends through fiscal years.  Note the slight degradation in fit as observation count (n) decreases.\\
 
@@ -631,7 +643,7 @@ Observations:  Pay disparity is greater in all years for higher quantiles.  Alth
 
 \section{The Rise of Grade in the U.S. Federal Government}
 
-This section uses results from a study of trends in pay grade within the U.S. federal government conducted by the Human Capital Project at Duke University \citep{BoltondeFigGradeInflation2016}.  Each sub-section compares the fit of a model used in the study to corresponding sub-sets of synthetic and authentic data.  Some figures include graphs that were constructed using corresponding data from OPM's on-line FedScope data repository  \citep{OPMFedScope} and are identified as ``FedScope."
+This section uses results from a study of trends in human capital and pay within the U.S. federal government, conducted by the Human Capital Project at Duke University \citep{BoltondeFigGradeInflation2016}.  Each sub-section compares the fit of a model used in the study to corresponding sub-sets of synthetic and authentic data.  Some figures include graphs that were constructed using corresponding data from OPM's on-line FedScope data repository  \citep{OPMFedScope} and are identified as ``FedScope."
 
 \subsection{Federal Wage Bill Decomposition}
 
