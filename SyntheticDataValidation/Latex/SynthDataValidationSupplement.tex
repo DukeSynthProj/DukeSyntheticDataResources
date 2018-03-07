@@ -12,7 +12,7 @@
     %linkcolor=,
     %citecolor=blue,
     %urlcolor=blue
-    allcolors=[rgb]{0, 0, 0.7}
+    allcolors=[rgb]{0, 0, 0.65}
 }
 \usepackage{amsmath}   % includes \boldmath(), \boldsymbol{()}
 \usepackage{bm}        % math fonts, \boldmath{}, \boldsymbol{}
@@ -181,7 +181,7 @@ Observation:  Proximity of all points to the slope 1.0 reference line indicates 
 
 \section{Cumulative Mass (Proportion Observations) by Pay Plan and Occupation}
 
-Figures \ref{figure:CMFOccupationPayPlan1} and \ref{figure:CMFOccupationPayPlan2} contain example cumulative mass plots for joint combinations of pay plan and occupation.  All occupations within each pay plan are represented.  Solid line for authentic data, dashed line for synthetic.  Overlapping or nearness of lines indicates equality of cumulative mass for corresponding levels of occupation within pay plan.  ``nJ" indicates observation count in authentic data, ``nD" indicates synthetic data observation count.  Near identical distribution is observed for high frequency pay plans GS, WG, GM, and VN, which account for more than 95\% of observations, indicating overall close agreement between data sets.  Increasing departure observed as number of observations decreases.\\
+Pay plan and occupation characterize an employee's job classification and services performed, making them important identifiers in human capital research.  Figures \ref{figure:CMFOccupationPayPlan1} and \ref{figure:CMFOccupationPayPlan2} contain example cumulative mass plots for joint combinations of pay plan and occupation.  All occupations within each pay plan are represented.  Solid line for authentic data, dashed line for synthetic.  Overlapping or nearness of lines indicates equality of cumulative mass for corresponding levels of occupation within pay plan.  ``nJ" indicates observation count in authentic data, ``nD" indicates synthetic data observation count.  Near identical distribution is observed for high frequency pay plans GS, WG, GM, and VN, which account for more than 95\% of observations, indicating overall close agreement between data sets.  Increasing departure observed as number of observations decreases.\\
 
 \begin{figure}[h]
     \centering
@@ -201,6 +201,149 @@ Figures \ref{figure:CMFOccupationPayPlan1} and \ref{figure:CMFOccupationPayPlan2
 
 \clearpage
 
+\section{Distribution of Grade by Joint Combinations of Agency, Occupation, Education, and Supervisor Status}
+
+Federal employee pay classification consists of a pay plan, grade, and step rate.  Since employee pay is largely determined by grade and promotions are detected by change in grade, it is important for the synthetic data to accurately reflect authentic proportions of observations by grade within joint combinations of critical human capital variables.\footnote{Although pay rate schedules exist for each pay plan, exceptions to published rates of pay may apply when an employee is transferred into a position that requires a grade adjustment.}  Observations are limited to GS pay plan, full-time.
+
+Figure \ref{figure:JdFDIBBSGSFullTimeGradeAdminProfessionalAgency} compares synthetic and authentic observation frequencies within joint categories of agency, occupational category, and grade.  Administrative and professional occupational categories are combined and appear in the lower plot of the panel and remaining GS categories (technical, clerical, and other white collar) appear as a group in the upper plot.  Each agency (x-axis) has two columns of dots, one on the left for authentic data and one on the right for synthetic data.  The size of each dot is scaled to represent the number of observations in the corresponding grade listed on the y-axis.  Dot sizes range from small (less than 1,000 observations) to large (more than 250,000 observations).  Total observation counts by agency are listed in rows at the top of each plot, ``n(JdF)" indicating authentic observations, ``n(DIBBS)" indicating synthetic.  Note that the graphs shown are for a sequence of representative agencies.  Those for remaining agencies show similar patterns.\\
+
+Figure \ref{figure:JdFDIBBSGSFullTimeGradeCollegeAgency} compares synthetic and authentic observation frequencies within joint categories of agency, education level (college or not), and grade.  Graphs shown are for a sequence of representative agencies.  Those for remaining agencies show similar patterns.\\
+
+Figure \ref{figure:JdFDIBBSGSFullTimeGradeSupervisoryStatusAgency} compares synthetic and authentic observation frequencies within joint categories of agency, supervisor status, and grade.  Graphs shown are for a sequence of representative agencies.  Those for remaining agencies show similar patterns.\\
+
+Figure \ref{figure:JdFDIBBSGSFullTimeGradeAdminProfessionalOccupation} compares synthetic and authentic observation frequencies within joint categories of occupation, occupational category, and grade.  Since most occupations are restricted to a single occupational category, panels appear disjoint, showing observations in one category, but not the other.  Synthetic data frequencies accurately reflect this property.  Graphs shown are for a sequence of representative occupations.  Those for remaining occupations show similar patterns.\\
+
+Figure \ref{figure:JdFDIBBSGSFullTimeGradeCollegeOccupation} compares synthetic and authentic observation frequencies within joint categories of occupation, education level (college or not), and grade.  Graphs shown are for a sequence of representative occupations.  Those for remaining occupations show similar patterns.\\
+
+Figure \ref{figure:JdFDIBBSGSFullTimeGradeSupervisoryStatusOccupation} compares synthetic and authentic observation frequencies within joint categories of occupation, supervisor status, and grade.  Graphs shown are for a sequence of representative occupations.  Those for remaining occupations show similar patterns.\\
+
+Observations:  Within the resolution of dot size, joint frequencies of agency, occupational category, occupation, education, supervisor status, and grade appear to agree in the data sets.  To compare n(DIBBS) and n(JdF) observation counts (aggregated counts for all grades within category combinations), the ratio of difference in synthetic and authentic count to authentic count was computed.  Figure \ref{figure:nRatioGrade} plots these ratios against corresponding authentic counts (in log scale).  Differences tend to be positive (synthetic greater than authentic) and there is a general decrease in error proportion with increase in n.
+
+\clearpage
+
+\begin{figure}[]
+    \centering
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeAdminProfessionalAgency61.png}
+        \caption{Agencies GG through KH}
+        \vspace{10pt}
+    \end{subfigure}
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeAdminProfessionalAgency101.png}
+        \caption{Agencies OM through SZ}
+    \end{subfigure}
+    \caption{Distribution of grade by agency.  Occupational categories Admin/Professional vs. non Admin/Professional.  Authentic on left, synthetic on right.  Dot size small (n<5,000) to large (n>250,000).}
+    \label{figure:JdFDIBBSGSFullTimeGradeAdminProfessionalAgency}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[]
+    \centering
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeCollegeAgency21.png}
+        \caption{Agencies BT through EC}
+        \vspace{10pt}
+    \end{subfigure}
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeCollegeAgency61.png}
+        \caption{Agencies GG through KH}
+    \end{subfigure}
+    \caption{Distribution of grade by agency.  College education vs. non-college.  Authentic on left, synthetic on right.  Dot size small (n<5,000) to large (n>250,000).}
+    \label{figure:JdFDIBBSGSFullTimeGradeCollegeAgency}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[]
+    \centering
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeSupervisoryStatusAgency21.png}
+        \caption{Agencies BT through EC}
+        \vspace{10pt}
+    \end{subfigure}
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeSupervisoryStatusAgency61.png}
+        \caption{Agencies GG through KH}
+    \end{subfigure}
+    \caption{Distribution of grade by agency and supervisor status.  Authentic on left, synthetic on right.  Dot size small (n<5,000) to large (n>250,000).}
+    \label{figure:JdFDIBBSGSFullTimeGradeSupervisoryStatusAgency}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[]
+    \centering
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeAdminProfessionalOccupation1.png}
+        \caption{Occupations 0006 through 0082}
+        \vspace{10pt}
+    \end{subfigure}
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeAdminProfessionalOccupation21.png}
+        \caption{Occupations 0083 through 0136}
+    \end{subfigure}
+    \caption{Distribution of grade by occupation.  Occupational categories Admin/Professional vs. non Admin/Professional.  Authentic on left, synthetic on right.  Dot size small (n<5,000) to large (n>250,000).}
+    \label{figure:JdFDIBBSGSFullTimeGradeAdminProfessionalOccupation}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[]
+    \centering
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeCollegeOccupation1.png}
+        \caption{Occupations 0006 through 0082}
+        \vspace{10pt}
+    \end{subfigure}
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeCollegeOccupation81.png}
+        \caption{Occupations 0305 through 0351}
+    \end{subfigure}
+    \caption{Distribution of grade by occupation.  College education vs. non-college.  Authentic on left, synthetic on right.  Dot size small (n<5,000) to large (n>250,000).}
+    \label{figure:JdFDIBBSGSFullTimeGradeCollegeOccupation}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[]
+    \centering
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeSupervisoryStatusOccupation1.png}
+        \caption{Occupations 0006 through 0082}
+        \vspace{10pt}
+    \end{subfigure}
+    \begin{subfigure}{1\textwidth}
+        \centering
+        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeSupervisoryStatusOccupation41.png}
+        \caption{Occupations 0140 through 0205}
+    \end{subfigure}
+    \caption{Distribution of grade by agency and supervisor status.  Authentic on left, synthetic on right.  Dot size small (n<5,000) to large (n>250,000).}
+    \label{figure:JdFDIBBSGSFullTimeGradeSupervisoryStatusOccupation}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=6in]{nRatioGrade.png}
+    \caption{Ratio of difference in synthetic and authentic observation count to authentic observation count.  Suffix of 0 indicates non-Admin, non-College, or non-Supervisor, suffix of 1 indicates Admin, College, or Supervisor.  Log x-axis scale.  Differences tend to be positive (synthetic $>$ authentic).  General decrease in error proportion with increase in n.}
+    \label{figure:nRatioGrade}
+\end{figure}
+
+\clearpage
+
 \section{Distribution of Basic Pay}
 
 Basic pay is an important dependent study variable and the distribution of pay values in the authentic data must be maintained in the synthetic data.\footnote{Basic pay is determined by pay plan, grade, and step rate and does not include adjustments such as for locale.} \footnote{Due to inflation, the value of wages earned is variable, typically decreasing by year.  To compensate for this, and to make inter-year values comparable, pay values throughout the entire document are adjusted to 2011 dollars using annual consumer price indices.}
@@ -210,8 +353,6 @@ Basic pay is an important dependent study variable and the distribution of pay v
 Figure \ref{figure:JdFDIBBSBasicPayDistribution} plots the distribution of basic pay for the top eight frequency agencies (first two positions):  Department of Agriculture (AG), Department of Justice (DJ), Department of Health and Human Services (HE), Department of Homeland Security (HS), Department of Interior (IN), Department of Transportation (TD), Department of Treasury (TR), and the Department of Veterans Affairs (VA).  These agencies account for approximately 85\% of observations.  Synthetic distribution represented by dashed line, authentic distribution by solid line.  ``n(D)" indicates synthetic data observation frequency, ``n(J)" indicates authentic data observation count.\\
 
 Observations:  Although each data set is represented in each graph, a single striped-appearing line is visible, due to identical frequency proportions at each pay level.  Local increases, decreases, and trends in authentic distribution are accurately represented in the synthetic data.\\
-
-\vspace{20pt}
 
 \begin{figure}[h]
     \centering
@@ -647,7 +788,7 @@ This section uses results from a study of trends in human capital and pay within
 
 \subsection{Federal Wage Bill Decomposition}
 
-Figure \ref{figure:WageChangePromotionVsFYAllPayPlans} shows the annual change in the total federal employee wage bill categorized by source:  change in grade, change in step rate, and other changes.  Synthetic data are represented by a dashed line, authentic data by a solid line.\\
+Figure \ref{figure:WageChangePromotionVsFYAllPayPlans} shows the annual change in the total federal employee wage bill, as reflected in the authentic OPM data set, categorized by source:  change in grade, change in step rate, and other changes.  Synthetic data are represented by a dashed line, authentic data by a solid line.\\
 
 Observation:  Although highly aggregated, each graph is informative and the synthetic data provide near identical insight into overall wage change patterns as do the authentic data.\\
 
@@ -664,7 +805,7 @@ Observation:  Although highly aggregated, each graph is informative and the synt
 
 \subsection{Change in GS Grade Distribution 2011 vs. 1988}
 
-The GS pay plan represents approximately 80\% of the observations in the data provided by OPM.  Accordingly, change in distribution of grade within this pay plan is an important consideration when conducting human capital research with these data.  Figure \ref{figure:GSGradeDistribution1988-2011} shows the change in grade distribution from fiscal years 1988 (solid line) to 2011 (dashed line).\\
+GS pay plan, full-time observations represent approximately 75\% of the data provided by OPM.  Accordingly, change in distribution of grade within this pay plan is an important consideration when conducting human capital research with these data.  Figure \ref{figure:GSGradeDistribution1988-2011} shows the change in grade distribution from fiscal years 1988 (solid line) to 2011 (dashed line).\\
 
 Observation:  Although highly aggregated, each graph is informative and the synthetic data provide near identical insight into overall and local change patterns as do the authentic data.\\
 
