@@ -570,11 +570,9 @@ Accurate proportion observations by gender is critical in reproducing authentic 
 
 Observation:  This four-way comparison (sex, race, education, and year) confirms good representation in synthetic data of gender proportion among important variable combinations in the authentic data.  Fitted logistic regression models have nearly identical trends through fiscal years.  Note the slight degradation in fit as observation count (n) decreases.\\
 
-\vspace{20pt}
-
 \begin{figure}[h]
     \centering
-    \includegraphics[width=6.5in, trim={0 0 0 1in}, clip]{GenderProportionLogisticModelEducationRaceFYScaleFixedv0-06.png}
+    \includegraphics[width=6.25in, trim={0 0 0 1in}, clip]{GenderProportionLogisticModelEducationRaceFYScaleFixedv0-06.png}
     \caption{Proportion female observations by race, education, and year.  Fitted lines are logistic regression estimates.}
     \label{figure:GenderProportionLogisticModelEducationRaceFYScaleFixedv0-06}
 \end{figure}
@@ -758,24 +756,110 @@ Observation:  Although the classifiers, exhibiting somewhat flat ROC curves (nea
 
 \clearpage
 
-\section{Gender Pay Differential Fixed Effects Quantile Regression Model}
+\section{Gender Pay Differential Fixed Effects Regression Model}
 
-Disparity in pay by gender is an important and common topic in human capital research.  Ordinary least squares regression can estimate the effect of gender on expected values of difference in pay, but we are also interested in the effect of gender on estimates of particular quantiles, pay values below which a given proportion of observations reside.  Of additional interest is the change in this effect over time, if any.  An example model that estimates the effect of gender on pay quantiles for a given year, controlling for race, age, education, agency, and occupation is
+In their study of pay disparity in the federal government, Alexander Bolton and John de Figueiredo report an effect of gender on difference in basic pay using fixed effects regression models that control for important human capital factors \citep{BoltondeFigGenderPayGap2017}.  An example model is
 
 \vspace{-10pt}
-\begin{equation} \mest{y}=\mest{\beta}_0+\mest{\beta}_ssex+\mest{\beta}_rrace+\mest{\beta}_{ag}age+\mest{\beta}_{ag^2}age^2+\mest{\beta}_{ed}education+\mest{\beta}_{agcy}agency+\mest{\beta}_{occ}occupation\\
+\begin{equation} y=\beta_0+\beta_ffemale+\beta_rrace+\beta_{ag}age+\beta_{ag^2}age^2+\beta_{ed}education+\beta_{bur}bureau+\beta_{occ}occupation+\beta_{yr}year\\
+\label{model:GenderPayOLS}
+\end{equation}
+
+where $y$ is the expected value of log(basic pay), given specific levels of race, age, years of education, bureau (proxy for agency), occupation, and year.  Using \textit{male} as the sex reference level, $\mest{\beta}_f$, estimated from model (\ref{model:GenderPayOLS}), measures the difference in pay between females and males after correction for the remaining variables.  Table \ref{table:GenderPayOLS} lists parameter estimates for model (\ref{model:GenderPayOLS}) fit to full-time, pay plan GS synthetic and authentic observations.  Common reference levels were used for both sets (sex male, race white, highest frequency bureau and occupation, and fiscal year 1988).  Corresponding standard errors appear in parentheses beneath each estimate.\footnote{Although Bolton and de Figueiredo compute robust standard errors clustered about employee, for simplicity we ignore potential heteroskedasticity of residuals and present here standard errors estimated using the diagonal of the inverse of the covariance matrix.}  Figure \ref{figure:DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel} plots 
+synthetic data estimates for model (\ref{model:GenderPayOLS}) against corresponding authentic data estimates, one point for each estimate.  The ``X" group includes estimates for sex, race, education, and age.  Figures \ref{figure:DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel-X}, \ref{figure:DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel-Bureau}, and \ref{figure:DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel-Occupation} plot parameter estimates obtained by fitting model (\ref{model:GenderPayOLS}) to annual subsets of synthetic and authentic data.  These are used to identify potential patterns of change in parameter estimate association throughout the study period.\\
+
+Observations (table):  Although some discrepancies exist between estimates from the two data sets, the close proximity of $\mest{\beta}_f$ estimates confirms the utility of synthetic data results for gender pay disparity research.\footnote{Some deviations may appear large with respect to corresponding standard errors.  However, due to relatively large observation counts, n, standard errors are small, implying that the data sets are more like populations than samples, which magnifies deviations and places traditional concepts of parameter estimate distribution and standard errors in question.}\\  In their analysis, Bolton and de Figueiredo conclude that the reported pay disparity of approximately -0.03 is significant.  Using the synthetic data, a researcher would measure very similar disparity and, presumably, reach similar conclusion of significance.
+
+Observations (figure \ref{figure:DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel}):  Points generally lie near the reference line of slope 1.0, indicating overall agreement of synthetic and authentic parameter estimates.  Light dots indicate low frequency bureaus and occupations and represent most of the large deviations from reference lines.\\
+
+Observations (annual figures):  Points generally lie near reference lines in all years for the three groups.  Low frequency bureaus and occupations (light dots) account for deviations from reference.  There does not appear to be any pattern of change in association of estimates between data sets throughout the period.
+
+\begin{table}[h]
+    \centering
+    \caption{Parameter estimates from gender pay disparity fixed effects model}
+    \label{table:GenderPayOLS}
+    \begin{tabular}{lrr}
+        \hline\\[-10pt]
+        Parameter Estimate & JdF & DIBBS \\ 
+        \hline\\[-6pt]
+        \hspace{10pt} $\mest{\beta}_0$ & 9.3973 & 9.6167 \\ 
+        & (7.19e-04) & (7.23e-04) \\ 
+        \hspace{10pt} $\mest{\beta}_f$ & -0.0319 & -0.0296 \\ 
+        & (1.10e-04) & (1.17e-04) \\ 
+        \hspace{10pt} $\mest{\beta}_{age}$ & 0.0352 & 0.0269 \\ 
+        & (2.93e-05) & (2.85e-05) \\ 
+        \hspace{10pt} $\mest{\beta}_{age^2}$ & -0.0003 & -0.0002 \\ 
+        & (3.29e-07) & (3.19e-07) \\ 
+        \hspace{10pt} $\mest{\beta}_{ed}$ & 0.0186 & 0.0122 \\ 
+        & (2.69e-05) & (2.78e-05) \\ 
+        \hspace{10pt} $\mest{\beta}_{raceAmInd}$ & -0.0370 & -0.0161 \\ 
+        & (4.03e-04) & (4.12e-04) \\ 
+        \hspace{10pt} $\mest{\beta}_{raceAsian}$ & -0.0320 & -0.0253 \\ 
+        & (2.53e-04) & (2.70e-04) \\ 
+        \hspace{10pt} $\mest{\beta}_{raceBlack}$ & -0.0095 & -0.0057 \\ 
+        & (1.25e-04) & (1.34e-04) \\ 
+        \hspace{10pt} $\mest{\beta}_{raceHisp}$ & -0.0202 & -0.0137 \\ 
+        & (1.85e-04) & (1.99e-04) \\ 
+        \hspace{10pt} $\mest{\beta}_{bureau}$ & & 332 fixed effect levels \\ 
+        \hspace{10pt} $\mest{\beta}_{occupation}$ & & 466 fixed effect levels \\ 
+        \hspace{10pt} $\mest{\beta}_{year}$ & & 23 fixed effect levels \\
+        \hspace{10pt} n & 18,165,075 & 18,714,815 \\[4pt]
+        \hline
+    \end{tabular}
+\end{table}
+
+\clearpage
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=6in, trim={0 0 0 1.5in}, clip]{DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel.png}
+    \caption{Pay disparity fixed effects regression model parameter estimates.  X group includes estimates for sex, race, education, and age.  Points lie near reference line of slope 1.0, indicating general agreement of synthetic and authentic parameter estimates.  Light dots represent low frequency bureaus and occupations.  They are associated with large deviations from reference line.}
+    \label{figure:DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=6in, trim={0 0 0 1in}, clip]{DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel-X.png}
+    \caption{Sex (female), race, age, $\text{age}^2$, and years of education parameter estimates from annual pay disparity fixed effects regression model.  Points near reference line, indicating similarity.  No pattern of change throughout study period.}
+    \label{figure:DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel-X}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=6in, trim={0 0 0 1in}, clip]{DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel-Bureau.png}
+    \caption{Bureau (agency) parameter estimates from annual pay disparity fixed effects regression model.  Points near reference line, indicating similarity.  Light points away from reference represent low frequency bureaus.  No pattern of change throughout study period.}
+    \label{figure:DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel-Bureau}
+\end{figure}
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=6in, trim={0 0 0 1in}, clip]{DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel-Occupation.png}
+    \caption{Occupation parameter estimates from annual pay disparity fixed effects regression model.  Points near reference line, indicating similarity.  Light points away from reference represent low frequency bureaus.  No pattern of change throughout study period.}
+    \label{figure:DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel-Occupation}
+\end{figure}
+
+\clearpage
+
+\section{Gender Pay Differential Fixed Effects Quantile Regression Model}
+
+Disparity in pay by gender is an important and common topic in human capital research.  Ordinary least squares regression can estimate the effect of gender on expected values of difference in pay, but also of interest are the effect of gender on estimates of particular quantiles, pay values below which a given proportion of observations reside.  Of additional interest is the change in this effect over time, if any.  An example model used to estimate the effect of gender on pay quantiles for a given year, controlling for race, age, education, agency, and occupation is
+
+\vspace{-10pt}
+\begin{equation} y=\beta_0+\beta_ssex+\beta_rrace+\beta_{ag}age+\beta_{ag^2}age^2+\beta_{ed}education+\beta_{agcy}agency+\beta_{occ}occupation\\
 \label{model:GenderPayQuantile}
 \end{equation}
 
-where $\mest{y}$ is a particular quantile of log(basic pay).  Figure \ref{figure:GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06} plots gender effects ($\mest{\beta}_s$) from model (\ref{model:GenderPayQuantile}) fit to annual subsets of observations for quantiles 0.1, 0.5, and 0.9.\\
+where $y$ is a particular quantile of log(basic pay).  Figure \ref{figure:GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06} plots estimates of gender effect ($\mest{\beta}_s$) from model (\ref{model:GenderPayQuantile}) fit to annual subsets of observations for quantiles 0.1, 0.5, and 0.9.\\
 
-Observations:  Pay disparity is greater in all years for higher quantiles.  Although some systematic separation appears between data sets, trends in the synthetic $\mest{\beta}_s$ estimates convey the important finding of gradual decreased effect of gender for all three quantiles, to near parity at the end of the study period.
-
-\vspace{20pt}
+Observations:  Estimates of gender effect ($\mest{\beta}$) tend to be greater for quantiles 0.5 and 0.9 than for 0.1 in all years.  This indicates a tendency, for median and high pay positions, of greater disparity between women and men with common occupation, education, and experience (age) profiles and, although with some systematic difference to authentic estimates, estimates from the synthetic data identify this important feature.  Additionally, the gradual trend toward parity ($\mest{\beta}_s$ estimates approach 0) as years advance that is observed in authentic data is also represented in the synthetic data.  Although parity appears to have been achieved in the final year for quantile 0.1, it remains at approximately -0.01 and -0.02 for quantiles 0.5 and 0.9, respectively, indicating an increasing lag of disparity as pay level increases.  This important result is also apparent in the synthetic data.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=5.25in, trim={0 0.75in 0 1.5in}, clip]{GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06.png}
+    \includegraphics[width=4.85in, trim={0 0.75in 0 1.5in}, clip]{GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06.png}
     \caption{Pay disparity gender effect quantile estimates.  Change over time.  Upper line represents synthetic data, lower line authentic data.}
     \label{figure:GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06}
 \end{figure}
