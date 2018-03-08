@@ -720,7 +720,7 @@ Observation:  Agreement for large count occupations is indicated by proximity of
 
 \clearpage
 
-\subsection{Occupation Gender Proportion Kernel Distribution}
+\subsection{Occupation Gender Proportion Kernel Density}
 
 Figure \ref{figure:JdFDIBBSProportionFemaleDistributionByOccupation-v0-06} superimposes synthetic and authentic kernel density plots of proportion female employees by occupation.\\
 
@@ -756,19 +756,21 @@ Observation:  Although the classifiers, exhibiting somewhat flat ROC curves (nea
 
 \clearpage
 
-\section{Gender Pay Differential Fixed Effects Regression Model}
+\section{Gender Pay Disparity Fixed Effects Models}
+
+\subsection{Fixed Effects Ordinary Least Squares Regression Model}
 
 In their study of pay disparity in the federal government, Alexander Bolton and John de Figueiredo report an effect of gender on difference in basic pay using fixed effects regression models that control for important human capital factors \citep{BoltondeFigGenderPayGap2017}.  An example model is
 
 \vspace{-10pt}
-\begin{equation} y=\beta_0+\beta_ffemale+\beta_rrace+\beta_{ag}age+\beta_{ag^2}age^2+\beta_{ed}education+\beta_{bur}bureau+\beta_{occ}occupation+\beta_{yr}year\\
+\begin{equation} y=\beta_0+\beta_ffemale+\beta_rrace+\beta_{ag}age+\beta_{ag^2}age^2+\beta_{ed}education+\beta_{bur}bureau+\beta_{occ}occupation+\beta_{yr}year
 \label{model:GenderPayOLS}
 \end{equation}
 
-where $y$ is the expected value of log(basic pay), given specific levels of race, age, years of education, bureau (proxy for agency), occupation, and year.  Using \textit{male} as the sex reference level, $\mest{\beta}_f$, estimated from model (\ref{model:GenderPayOLS}), measures the difference in pay between females and males after correction for the remaining variables.  Table \ref{table:GenderPayOLS} lists parameter estimates for model (\ref{model:GenderPayOLS}) fit to full-time, pay plan GS synthetic and authentic observations.  Common reference levels were used for both sets (sex male, race white, highest frequency bureau and occupation, and fiscal year 1988).  Corresponding standard errors appear in parentheses beneath each estimate.\footnote{Although Bolton and de Figueiredo compute robust standard errors clustered about employee, for simplicity we ignore potential heteroskedasticity of residuals and present here standard errors estimated using the diagonal of the inverse of the covariance matrix.}  Figure \ref{figure:DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel} plots 
+where $y$ is the expected value of log(basic pay), given specific levels of race, age, years of education, bureau (proxy for agency), occupation, and year.  Using \textit{male} as the sex reference level, $\mest{\beta}_f$, estimated from model (\ref{model:GenderPayOLS}), measures the difference in pay between females and males after correcting for the remaining variables.  Table \ref{table:GenderPayOLS} lists parameter estimates for model (\ref{model:GenderPayOLS}) fit to full-time, pay plan GS synthetic and authentic observations.  Common reference levels were used for both sets (sex male, race white, highest frequency bureau and occupation, and fiscal year 1988).  Corresponding standard errors appear in parentheses beneath each estimate.\footnote{Although Bolton and de Figueiredo compute robust standard errors clustered about employee, for simplicity we ignore potential heteroskedasticity of residuals and present here (homoskedastic residual based) standard errors estimated using the diagonal of the inverse of the covariance matrix.}  Figure \ref{figure:DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel} plots 
 synthetic data estimates for model (\ref{model:GenderPayOLS}) against corresponding authentic data estimates, one point for each estimate.  The ``X" group includes estimates for sex, race, education, and age.  Figures \ref{figure:DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel-X}, \ref{figure:DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel-Bureau}, and \ref{figure:DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel-Occupation} plot parameter estimates obtained by fitting model (\ref{model:GenderPayOLS}) to annual subsets of synthetic and authentic data.  These are used to identify potential patterns of change in parameter estimate association throughout the study period.\\
 
-Observations (table):  Although some discrepancies exist between estimates from the two data sets, the close proximity of $\mest{\beta}_f$ estimates confirms the utility of synthetic data results for gender pay disparity research.\footnote{Some deviations may appear large with respect to corresponding standard errors.  However, due to relatively large observation counts, n, standard errors are small, implying that the data sets are more like populations than samples, which magnifies deviations and places traditional concepts of parameter estimate distribution and standard errors in question.}\\  In their analysis, Bolton and de Figueiredo conclude that the reported pay disparity of approximately -0.03 is significant.  Using the synthetic data, a researcher would measure very similar disparity and, presumably, reach similar conclusion of significance.
+Observations (table):  Although some discrepancies exist between estimates from the two data sets, the close proximity of $\mest{\beta}_f$ estimates confirms the utility of synthetic data results for gender pay disparity research.\footnote{Some deviations in parameter estimates may appear large with respect to corresponding standard errors.  However, due to relatively large observation counts, n, standard errors are small, implying that the data sets are more like populations than samples, which magnifies deviations and calls into question customary notions of parameter estimate distribution.}  In their analysis, Bolton and de Figueiredo conclude that the reported pay disparity of approximately -0.03 is significant.  Using the synthetic data, a researcher would measure very similar disparity and, presumably, reach a similar conclusion of significance.\\
 
 Observations (figure \ref{figure:DIBBSEstimateVsJdFEstimateNoInterceptGSPayPlanFixedRefLevel}):  Points generally lie near the reference line of slope 1.0, indicating overall agreement of synthetic and authentic parameter estimates.  Light dots indicate low frequency bureaus and occupations and represent most of the large deviations from reference lines.\\
 
@@ -844,12 +846,11 @@ Observations (annual figures):  Points generally lie near reference lines in all
 
 \clearpage
 
-\section{Gender Pay Differential Fixed Effects Quantile Regression Model}
+\subsection{Fixed Effects Quantile Regression Model}
 
-Disparity in pay by gender is an important and common topic in human capital research.  Ordinary least squares regression can estimate the effect of gender on expected values of difference in pay, but also of interest are the effect of gender on estimates of particular quantiles, pay values below which a given proportion of observations reside.  Of additional interest is the change in this effect over time, if any.  An example model used to estimate the effect of gender on pay quantiles for a given year, controlling for race, age, education, agency, and occupation is
+Disparity in pay attributed to gender is an important and common topic in human capital research.  Ordinary least squares regression estimates the effect of gender on expected values of difference in pay, but also of interest is the effect of gender on estimates of particular quantiles, pay values below which a given proportion of observations reside.  Of additional interest is the change in this effect over time, if any.  An example model used to estimate the effect of gender on pay quantiles for a given year, controlling for race, age, education, agency, and occupation is\\[-16pt]
 
-\vspace{-10pt}
-\begin{equation} y=\beta_0+\beta_ssex+\beta_rrace+\beta_{ag}age+\beta_{ag^2}age^2+\beta_{ed}education+\beta_{agcy}agency+\beta_{occ}occupation\\
+\begin{equation} y=\beta_0+\beta_ssex+\beta_rrace+\beta_{ag}age+\beta_{ag^2}age^2+\beta_{ed}education+\beta_{agcy}agency+\beta_{occ}occupation
 \label{model:GenderPayQuantile}
 \end{equation}
 
@@ -859,7 +860,7 @@ Observations:  Estimates of gender effect ($\mest{\beta}$) tend to be greater fo
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=4.85in, trim={0 0.75in 0 1.5in}, clip]{GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06.png}
+    \includegraphics[width=5.15in, trim={0 0.75in 0 1.5in}, clip]{GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06.png}
     \caption{Pay disparity gender effect quantile estimates.  Change over time.  Upper line represents synthetic data, lower line authentic data.}
     \label{figure:GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06}
 \end{figure}
@@ -1021,6 +1022,73 @@ Observations:  Mean difference in years of education appears to be associated wi
 
 \clearpage
 
+\section{Logistic Regression Promotion Model}
+
+In addition to studying disparities in pay, human capital researchers are interested in measuring possible disparities in promotion that are associated with gender or race.  For the federal employee, OPM defines promotion as a positive change in grade and, since their data set has one observation per employee per year, proportion employees promoted per year within a given category (of, say, sex, race, grade, and age) can be computed as the ratio of the number of observations with increase in grade, by employee, since their most recent work year to the total number of employee-year observations in the category.  Limiting data to full-time observations within the GS pay plan, the logistic regression model\\[-14pt]
+
+\begin{equation} \mest{p}=f(\mest{\beta}_{sex}sex+\mest{\beta}_{race}race+\mest{\beta}_{grade}grade+\mest{\beta}_{age}age)
+\label{model:LogisticPromotion}
+\end{equation}\\[-20pt]
+
+estimates the proportion of employees promoted per year within each distinct group of sex, race, grade and age.\footnote{The GS pay plan has numeric grades, which are convenient for identifying increases.  Also, GS, full-time observations account for approximately 75\% of observations supplied by OPM.} \footnote{Since observations are restricted to those for the GS pay plan, promotions to or from other pay plans are excluded here.} \footnote{Age is used as a proxy for work experience.}  Figures \ref{figure:PromotionSexRaceageGS3-7Observed} through \ref{figure:PromotionSexRaceageGS13-17Observed} plot observed proportion employees promoted per year as a function of age, given sex, race, and grade for grades 3 through 7, grades 8 through 12, and grades 13 through 17, respectively.  Figures \ref{figure:PromotionSexRaceageGS3-7Observed} through \ref{figure:PromotionSexRaceageGS13-17Observed} plot proportions estimated from model(\ref{model:LogisticPromotion}) fit to observed proportions for grades 3 through 7, grades 8 through 12, and grades 13 through 17, respectively.\\
+
+Observations:
+
+\clearpage
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=6in, trim={0 0 0 1in}, clip]{PromotionSexRaceageGS3-7Observed.png}
+    \caption{Observed proportion employees promoted per year as a function of age (experience) given sex, race, and grade.  1989-2011.  GS pay plan, grades 3 through 7.}
+    \label{figure:PromotionSexRaceageGS3-7Observed}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=6in, trim={0 0 0 1in}, clip]{PromotionSexRaceageGS8-12Observed.png}
+    \caption{Observed proportion employees promoted per year as a function of age (experience) given sex, race, and grade.  1989-2011.  GS pay plan, grades 8 through 12.}
+    \label{figure:PromotionSexRaceageGS8-12Observed}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=6in, trim={0 0 0 1in}, clip]{PromotionSexRaceageGS13-17Observed.png}
+    \caption{Observed proportion employees promoted per year as a function of age (experience) given sex, race, and grade.  1989-2011.  GS pay plan, grades 13 through 17.}
+    \label{figure:PromotionSexRaceageGS13-17Observed}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=6in, trim={0 0 0 1in}, clip]{PromotionSexRaceageGS3-7Observed.png}
+    \caption{Logistic regression estimates of proportion employees promoted per year as a function of age (experience) given sex, race, and grade.  1989-2011.  GS pay plan, grades 3 through 7.}
+    \label{figure:PromotionSexRaceageGS3-7Model}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=6in, trim={0 0 0 1in}, clip]{PromotionSexRaceageGS8-12Observed.png}
+    \caption{Logistic regression estimates of proportion employees promoted per year as a function of age (experience) given sex, race, and grade.  1989-2011.  GS pay plan, grades 8 through 12.}
+    \label{figure:PromotionSexRaceageGS8-12Model}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=6in, trim={0 0 0 1in}, clip]{PromotionSexRaceageGS13-17Observed.png}
+    \caption{Logistic regression estimates of proportion employees promoted per year as a function of age (experience) given sex, race, and grade.  1989-2011.  GS pay plan, grades 13 through 17.}
+    \label{figure:PromotionSexRaceageGS13-17Model}
+\end{figure}
+
+\clearpage
 
 \end{spacing}
 
