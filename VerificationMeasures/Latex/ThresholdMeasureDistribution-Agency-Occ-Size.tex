@@ -67,7 +67,7 @@ In order to assess the effect of partition count and number of observations per 
     \centering
     \caption{Large to small authentic observation agency, occupation, sex and race subsets chosen for simulation.}
     \begin{tabular}{llllr}
-      \hline
+      \hline\\[-10pt]
       Agency & & Occupation & & Total Observations \\ 
       \hline\\[-6pt]
       VATA & Veterans Health Admin & 620 & Practical Nurse & 66,394 \\
@@ -253,74 +253,74 @@ Figure \ref{figure:RacePayDifferential-p-Variance-nPartitions}:  Variance of pos
 
 \vspace{12pt}
 
-Figure \ref{figure:RacePayDifferential-p-Simulation-10-90-Quantiles}:  Simulation of posterior p for M = 10, 20, 30, 40, and 50, and all values of S $\in$ \{1, ..., M\}.  $\epsilon$ = 0.5, 1, and 2.  Of note is the decrease in dispersion as either M or $\epsilon$ increase.  Decreased dispersion with increase in M is consistent with the relationship of M to Beta distribution variance, as discussed.  Increase in $\epsilon$ reduces variance of the Laplace (double exponential) distribution, which is used to center a binomial distribution used in random selection of S within the posterior p algorithm.  From the expression of the mode of the Beta distribution, $\frac{S-1}{S+M-2}$, it is clear that, for a given M, the distribution of generated posterior p values is stable for constant or reduced variance S. 
+Figure \ref{figure:RacePayDifferential-p-Simulation-10-90-Quantiles}:  Simulation of posterior p for M = 10, 20, 30, 40, and 50, and all values of S $\in$ \{1, ..., M\}.  $\epsilon$ = 0.5, 1, and 2.  Of note is the decrease in dispersion as either M or $\epsilon$ increase.  Decreased dispersion with increase in M is consistent with the relationship of M to Beta distribution variance, as discussed.  Increase in $\epsilon$ reduces variance of the Laplace (double exponential) distribution, which is used to center a binomial distribution used in random selection of S within the posterior p algorithm.  From the expression of the mode of the Beta distribution, $\frac{S-1}{S+M-2}$, it is clear that, for a given M, the distribution of generated posterior p values is stable for constant or reduced variance S.\\
 
-\clearpage
+\vspace{20pt}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=5in]{images/RacePayDifferentialBetaWithPosteriorDistribution-VATA-620-F-C.png}
+    \includegraphics[width=6in]{images/RacePayDifferentialBetaWithPosteriorDistribution-VATA-620-F-C.png}
     \caption{Parameter estimate distribution with distribution of posterior p modes for model (\ref{model:OPM-lnPay-Race}), \textbf{VATA-620-F-C, Veterans Admin, Practical Nurse, Female, Black}.  Ten iterations of random pseudo ID partition generation.  Number of partitions on x-axis.  Dashed line is threshold.  Solid line, given as reference, is disparity coefficient estimate from entire synthetic data set.  Posterior p distributions generated using $\epsilon$ = 0.5, 1.0, and 2.0.}
     \label{figure:RacePayDifferentialBetaWithPosteriorDistribution-VATA-620-F-C}
 \end{figure}
 
 \clearpage
 
-\begin{figure}[h!]
+\begin{figure}[]
     \centering
-    \includegraphics[width=5in]{images/RacePayDifferentialBetaWithPosteriorDistribution-SZ00-105-F-D.png}
+    \includegraphics[width=6in]{images/RacePayDifferentialBetaWithPosteriorDistribution-SZ00-105-F-D.png}
     \caption{Parameter estimate distribution with distribution of posterior p modes for model (\ref{model:OPM-lnPay-Race}), \textbf{SZ00-105-F-D, Social Security Admin, Social Insurance Administrator, Female, Hispanic}.  Ten iterations of random pseudo ID partition generation.  Number of partitions on x-axis.  Dashed line is threshold.  Solid line, given as reference, is disparity coefficient estimate from entire synthetic data set.  Posterior p distributions generated using $\epsilon$ = 0.5, 1.0, and 2.0.}
     \label{figure:RacePayDifferentialBetaWithPosteriorDistribution-SZ00-105-F-D}
 \end{figure}
 
 \clearpage
 
-\begin{figure}[h!]
+\begin{figure}[]
     \centering
-    \includegraphics[width=5in]{images/RacePayDifferentialBetaWithPosteriorDistribution-TD03-2152-M-C.png}
+    \includegraphics[width=6in]{images/RacePayDifferentialBetaWithPosteriorDistribution-TD03-2152-M-C.png}
     \caption{Parameter estimate distribution with distribution of posterior p modes for model (\ref{model:OPM-lnPay-Race}), \textbf{TD03-2152-M-C, FAA, Air Traffic Controller, Male, Black}.  Ten iterations of random pseudo ID partition generation.  Number of partitions on x-axis.  Dashed line is threshold.  Solid line, given as reference, is disparity coefficient estimate from entire synthetic data set.  Posterior p distributions generated using $\epsilon$ = 0.5, 1.0, and 2.0.}
     \label{figure:RacePayDifferentialBetaWithPosteriorDistribution-TD03-2152-M-C}
 \end{figure}
 
 \clearpage
 
-\begin{figure}[h!]
+\begin{figure}[]
     \centering
-    \includegraphics[width=5in]{images/RacePayDifferentialBetaWithPosteriorDistribution-TR93-592-F-B.png}
+    \includegraphics[width=6in]{images/RacePayDifferentialBetaWithPosteriorDistribution-TR93-592-F-B.png}
     \caption{Parameter estimate distribution with distribution of posterior p modes for model (\ref{model:OPM-lnPay-Race}), \textbf{TR93-592-F-B, IRS, Tax Examiner, Female, Asian}.  Ten iterations of random pseudo ID partition generation.  Number of partitions on x-axis.  Dashed line is threshold.  Solid line, given as reference, is disparity coefficient estimate from entire synthetic data set.  Posterior p distributions generated using $\epsilon$ = 0.5, 1.0, and 2.0.}
     \label{figure:RacePayDifferentialBetaWithPosteriorDistribution-TR93-592-F-B}
 \end{figure}
 
 \clearpage
 
-\begin{figure}[h!]
+\begin{figure}[]
     \centering
-    \includegraphics[width=5in]{images/RacePayDifferentialBetaWithPosteriorDistribution-DJ09-905-F-C.png}
+    \includegraphics[width=6in]{images/RacePayDifferentialBetaWithPosteriorDistribution-DJ09-905-F-C.png}
     \caption{Parameter estimate distribution with distribution of posterior p modes for model (\ref{model:OPM-lnPay-Race}), \textbf{DJ09-905-F-C, Office of U.S. Attorney, Attorney, Female, Black}.  Ten iterations of random pseudo ID partition generation.  Number of partitions on x-axis.  Dashed line is threshold.  Solid line, given as reference, is disparity coefficient estimate from entire synthetic data set.  Posterior p distributions generated using $\epsilon$ = 0.5, 1.0, and 2.0.}
     \label{figure:RacePayDifferentialBetaWithPosteriorDistribution-DJ09-905-F-C}
 \end{figure}
 
 \clearpage
 
-\begin{figure}[h!]
+\begin{figure}[]
     \centering
-    \includegraphics[width=5in]{images/RacePayDifferentialBetaWithPosteriorDistribution-DJ02-1811-F-B.png}
+    \includegraphics[width=6in]{images/RacePayDifferentialBetaWithPosteriorDistribution-DJ02-1811-F-B.png}
     \caption{Parameter estimate distribution with distribution of posterior p modes for model (\ref{model:OPM-lnPay-Race}), \textbf{DJ02-1811-F-B, FBI, Criminal Investigator, Female, Asian}.  Ten iterations of random pseudo ID partition generation.  Number of partitions on x-axis.  Dashed line is threshold.  Solid line, given as reference, is disparity coefficient estimate from entire synthetic data set.  Posterior p distributions generated using $\epsilon$ = 0.5, 1.0, and 2.0.}
     \label{figure:RacePayDifferentialBetaWithPosteriorDistribution-DJ02-1811-F-B}
 \end{figure}
 
 \clearpage
 
-\begin{figure}[h!]
+\begin{figure}[]
     \centering
-    \includegraphics[width=5in]{images/RacePayDifferentialBetaWithPosteriorDistribution-LF00-905-F-B.png}
+    \includegraphics[width=6in]{images/RacePayDifferentialBetaWithPosteriorDistribution-LF00-905-F-B.png}
     \caption{Parameter estimate distribution with distribution of posterior p modes for model (\ref{model:OPM-lnPay-Race}), \textbf{LF00-511-F-B, FEC, Attorney, Female, Black}.  Ten iterations of random pseudo ID partition generation.  Number of partitions on x-axis.  Dashed line is threshold.  Solid line, given as reference, is disparity coefficient estimate from entire synthetic data set.  Posterior p distributions generated using $\epsilon$ = 0.5, 1.0, and 2.0.}
     \label{figure:RacePayDifferentialBetaWithPosteriorDistribution-LF00-905-F-B}
 \end{figure}
 
 \clearpage
 
-\begin{figure}[h!]
+\begin{figure}[]
     \centering
     \includegraphics[width=6in]{RacePayDifferential-p-Variance-Partition-Size.png}
     \caption{Variance of posterior p values with respect to partition size.  Each point represents the variance of ten posterior p values, from the ten iterations for each agency, occupation, sex, race, M, and $\epsilon$.}
@@ -329,7 +329,7 @@ Figure \ref{figure:RacePayDifferential-p-Simulation-10-90-Quantiles}:  Simulatio
 
 \clearpage
 
-\begin{figure}[h!]
+\begin{figure}[]
     \centering
     \includegraphics[width=6in]{RacePayDifferential-p-Variance-nPartitions.png}
     \caption{Variance of posterior p values with respect to M.  Each point represents the variance of ten posterior p values, from the ten iterations for each agency, occupation, sex, race, M, and $\epsilon$.}
@@ -339,7 +339,7 @@ Figure \ref{figure:RacePayDifferential-p-Simulation-10-90-Quantiles}:  Simulatio
 \clearpage
 
 
-\begin{figure}[h!]
+\begin{figure}[]
     \centering
     \includegraphics[width=6in]{RacePayDifferential-p-Simulation-10-90-Quantiles.png}
     \caption{10-90 percentile ranges of simulated posterior p values for indicated values of M and $\epsilon$.  Number of partitions at threshold, S, on x-axis.  Decrease in dispersion apparent with increase in M and $\epsilon$.}
