@@ -63,6 +63,43 @@ This document is organized in sections, each addressing a particular validation 
 
 \clearpage
 
+\section{Data Set Overview}
+
+Authentic data supplied by OPM consists of what are called status records and contain important human capital indicators, such as agency employed by, grade, sex, race, age, occupation, education, and pay as of September 30th of each year reported.  The OPM data set includes status records for select agencies from years 1988 through 2011.  The synthetic data were generated using covariate and longitudinal relationships observed in the authentic data.  Table \ref{table:DataSetReview} gives a basic outline of the authentic and synthetic data sets.\\
+
+\begin{table}[h]
+    \centering
+    \caption{Outline of authentic and synthetic data sets}
+    \label{table:DataSetReview}
+    \begin{tabular}{lrrrr}
+        \hline\\[-10pt]
+        & Authentic & & Synthetic & \\
+        \hline\\[-6pt]
+        Total observation count & 28,257,629 & & 28,512,573 & \\
+        Fiscal years represented & 1988-2011 & & 1988-2011 & \\
+        Distinct employees & 3,511,824 & & 3,510,406 & \\
+        Distinct agencies & 607 & & 604 & \\
+        Distinct occupations & 803 & & 803 & \\
+        Records with basic pay = 0 &  49,696 & 1.4\% & 55,405 & 1.6\% \\
+        Duplicate employee, year combinations & 21,126 & 0.6\% & 0 & 0.0\% \\
+        Year, agency combinations absent in other set & 15 & 0.2\% & 0 & 0.0\% \\
+        Year, agency, occupation combinations absent in other set & 2156 & 0.6\% & 0 & 0.0\% \\
+        Remaining variable codes are as they appear in the GDS & & & & \\[4pt]
+        \hline
+    \end{tabular}
+\end{table}
+
+\vspace{12pt}
+
+Notes:
+\begin{itemize}
+    \item Based on discussions with OPM, basic pay should never be zero.  Records with such values are considered invalid and are excluded from certain of the analyses that follow, particularly those that categorize or use basic pay as a response variable.  Records with basic pay equal to 0 were generated in the synthetic data in order to simulate actual properties of the authentic data.
+    \item According to OPM, employee ID and year should be unique.  However, in the authentic data, a small proportion of duplicates are observed.  Certain of the following analyses restrict observations to a unique employee ID, year combinations.  In selecting distinct combinations, preference is given to records with non-zero basic pay.  If multiple records remain for an employee, year combination after basic pay filtering, a single record is randomly selected for the employee and year.  Synthetic records do not have duplicated ID, year combinations.
+    \item A small proportion of year, agency and year, agency, occupation combinations appearing in the authentic data do not appear in the synthetic data.  However, all combinations appearing in the synthetic data are reflected in the authentic data.  Thus, the synthetic data do not create new agency, occupation, time relationships.
+\end{itemize}
+
+\clearpage
+
 \section{Covariate Relationships}
 
 For the synthetic data to have utility, covariate relationships must reflect those observed in the authentic data.  This section compares, for significant human capital variables, synthetic and authentic two variable correlation and correlation of primary variables with two variable interactions.  Data are limited to pay plan GS, full-time observations, which represents the largest federal white collar pay plan and account for approximately 75\% of observations supplied by OPM.
@@ -784,7 +821,7 @@ Observations (annual figures):  Points generally lie near reference lines in all
     \label{table:GenderPayOLS}
     \begin{tabular}{lrr}
         \hline\\[-10pt]
-        Parameter Estimate & JdF & DIBBS \\ 
+        Parameter Estimate & OPM & DIBBS \\ 
         \hline\\[-6pt]
         \hspace{10pt} $\mest{\beta}_0$ & 9.3973 & 9.6167 \\ 
         & (7.19e-04) & (7.23e-04) \\ 
@@ -862,7 +899,7 @@ Observations:  Estimates of gender effect ($\mest{\beta}$) tend to be greater fo
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=5.15in, trim={0 0.75in 0 1.5in}, clip]{GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06.png}
+    \includegraphics[width=4.85in, trim={0 0.75in 0 1.5in}, clip]{GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06.png}
     \caption{Pay disparity gender effect quantile estimates.  Change over time.  Upper line represents synthetic data, lower line authentic data.}
     \label{figure:GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06}
 \end{figure}
@@ -1088,6 +1125,63 @@ Observations:
     \includegraphics[width=6in, trim={0 0 0 1in}, clip]{PromotionSexRaceageGS13-17Model.png}
     \caption{Logistic regression estimates of proportion employees promoted per year as a function of age (experience) given sex, race, and grade.  1989-2011.  GS pay plan, grades 13 through 17.}
     \label{figure:PromotionSexRaceageGS13-17Model}
+\end{figure}
+
+\clearpage
+
+\section{Longitudinal Employee Careers}
+
+Relationships of human capital factors such as experience, education, and demographics to agency and occupation employed in, along with patterns of change through time, are important areas of study.  To assess the U.S. federal employee's readiness to develop and execute policy, along with associated costs, researchers model promotion, changes in distribution of professional class and grade within subpopulations, and patterns of mobility between agencies and occupations.  Some models include ancillary data to compare human capital profiles of public sector employees to compatible workers in the private sector.  Some measure interaction between events within and without official governmental programs.  For the synthetic data to be useful in these contexts, longitudinal relationships must be maintained and, in fact, it is with agency and year that the synthesis algorithm begins.  As seen earlier, in table \ref{table:DataSetReview}, the synthetic data have slightly more observations than the authentic data, but with slightly fewer employees and contain no new year, agency, occupation combinations.  Figure \ref{figure:TotalObsProportions} plots the ratio, by year, of synthetic observations to total authentic observations.  The dotted line is the ratio of total synthetic to total authentic observations.  The solid line is the accumulated proportion, by year, of authentic observations within agency that appear in the synthetic data.  These ratios deduct for under-representation and omit over-represented observations by agency.  Note that duplicate year, employee ID, and agency in the authentic data are reduced to a single instance.\\
+
+Observations:  There exists an additional, approximate 1.25\% total synthetic records per year, but observation frequency proportions within year and agency remain high at approximately 98\% of authentic counts.  Although cross-sectional, since annual totals are independent, it appears that the volume of synthetic observations by agency in each year is consistent with that needed to accurately represent careers in the authentic data.  A slight, gradual increase in proportion observations within agency by year is apparent. 
+
+\vspace{2pt}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=5.25in, trim={0 0.85in 0 0.5in}, clip]{TotalObsProportions.png}
+    \caption{Annual ratios of synthetic to authentic observations.  Dotted line is the ratio of total synthetic to total authentic observations.  Solid line is the accumulated proportion, by year, of authentic observations within agency that appear in the synthetic data.}
+    \label{figure:TotalObsProportions}
+\end{figure}
+
+\clearpage
+
+\subsection{Careers by Consecutive Year Agencies}
+
+\textit{Explanation}\\
+
+Observations:  Line corresponding to n=1 is identical to proportion authentic year, agency observations in synthetic data in figure \ref{figure:TotalObsProportions} (solid line).  This is because single year career segments are equivalent to cross-sectional proportions by year.\\
+
+Patterns of line for n years influences shape of lines for subsequent n.  \textit{Explain}\\
+
+Proportions above 0.88, even for 24 year careers.\\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=5.25in, trim={0 0 0 0.75in}, clip]{CareerProportionsAgency.png}
+    \caption{Proportion of authentic careers represented in synthetic data.  Careers based on agencies employed in during n consecutive years.  One line for each n from 1 to 24.  Points on line represent proportion for n-year segment beginning in corresponding year on x-axis.}
+    \label{figure:CareerProportionsAgency}
+\end{figure}
+
+\clearpage
+
+\subsection{Careers by Consecutive Year Agency and Occupation}
+
+\textit{Explanation}\\
+
+Observations:  Proportions generally below those for careers based solely on agency.\\
+
+Lines generally more flat than those for agency alone, particularly for small n.\\
+
+Proportions above 0.65, indicating possible limitation to accurate modeling of careers, particularly lengthy ones.\\
+
+Curious ridge.\\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=5.25in, trim={0 0 0 0.75in}, clip]{CareerProportionsAgencyOcc.png}
+    \caption{Proportion of authentic careers represented in synthetic data.  Careers based on agencies and occupations employed in during n consecutive years.  One line for each n from 1 to 24.  Points on line represent proportion for n-year segment beginning in corresponding year on x-axis.}
+    \label{figure:CareerProportionsAgencyOcc}
 \end{figure}
 
 \clearpage
