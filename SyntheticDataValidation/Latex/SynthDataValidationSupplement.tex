@@ -273,7 +273,7 @@ Observations:  Within the resolution of dot size, joint frequencies of agency, o
         \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeAdminProfessionalAgency101.png}
         \caption{Agencies OM through SZ}
     \end{subfigure}
-    \caption{Distribution of grade by agency.  Occupational categories Admin/Professional vs. non Admin/Professional.  Authentic on left, synthetic on right.  Dot size small (n<5,000) to large (n>250,000).}
+    \caption{Distribution of grade by agency.  Occupational categories Admin/Professional vs. non Admin/Professional.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).}
     \label{figure:JdFDIBBSGSFullTimeGradeAdminProfessionalAgency}
 \end{figure}
 
@@ -292,7 +292,7 @@ Observations:  Within the resolution of dot size, joint frequencies of agency, o
         \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeCollegeAgency61.png}
         \caption{Agencies GG through KH}
     \end{subfigure}
-    \caption{Distribution of grade by agency.  College education vs. non-college.  Authentic on left, synthetic on right.  Dot size small (n<5,000) to large (n>250,000).}
+    \caption{Distribution of grade by agency.  College education vs. non-college.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).}
     \label{figure:JdFDIBBSGSFullTimeGradeCollegeAgency}
 \end{figure}
 
@@ -311,7 +311,7 @@ Observations:  Within the resolution of dot size, joint frequencies of agency, o
         \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeSupervisoryStatusAgency61.png}
         \caption{Agencies GG through KH}
     \end{subfigure}
-    \caption{Distribution of grade by agency and supervisor status.  Authentic on left, synthetic on right.  Dot size small (n<5,000) to large (n>250,000).}
+    \caption{Distribution of grade by agency and supervisor status.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).}
     \label{figure:JdFDIBBSGSFullTimeGradeSupervisoryStatusAgency}
 \end{figure}
 
@@ -330,7 +330,7 @@ Observations:  Within the resolution of dot size, joint frequencies of agency, o
         \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeAdminProfessionalOccupation21.png}
         \caption{Occupations 0083 through 0136}
     \end{subfigure}
-    \caption{Distribution of grade by occupation.  Occupational categories Admin/Professional vs. non Admin/Professional.  Authentic on left, synthetic on right.  Dot size small (n<5,000) to large (n>250,000).}
+    \caption{Distribution of grade by occupation.  Occupational categories Admin/Professional vs. non Admin/Professional.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).}
     \label{figure:JdFDIBBSGSFullTimeGradeAdminProfessionalOccupation}
 \end{figure}
 
@@ -349,7 +349,7 @@ Observations:  Within the resolution of dot size, joint frequencies of agency, o
         \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeCollegeOccupation81.png}
         \caption{Occupations 0305 through 0351}
     \end{subfigure}
-    \caption{Distribution of grade by occupation.  College education vs. non-college.  Authentic on left, synthetic on right.  Dot size small (n<5,000) to large (n>250,000).}
+    \caption{Distribution of grade by occupation.  College education vs. non-college.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).}
     \label{figure:JdFDIBBSGSFullTimeGradeCollegeOccupation}
 \end{figure}
 
@@ -368,7 +368,7 @@ Observations:  Within the resolution of dot size, joint frequencies of agency, o
         \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeSupervisoryStatusOccupation41.png}
         \caption{Occupations 0140 through 0205}
     \end{subfigure}
-    \caption{Distribution of grade by agency and supervisor status.  Authentic on left, synthetic on right.  Dot size small (n<5,000) to large (n>250,000).}
+    \caption{Distribution of grade by agency and supervisor status.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).}
     \label{figure:JdFDIBBSGSFullTimeGradeSupervisoryStatusOccupation}
 \end{figure}
 
@@ -1063,15 +1063,27 @@ Observations:  Mean difference in years of education appears to be associated wi
 
 \section{Logistic Regression Promotion Model}
 
-In addition to studying disparities in pay, human capital researchers are interested in measuring possible disparities in promotion that are associated with gender or race.  For the federal employee, OPM defines promotion as a positive change in grade and, since their data set has one observation per employee per year, proportion employees promoted per year within a given category (of, say, sex, race, grade, and age) can be computed as the ratio of the number of observations with increase in grade, by employee, since their most recent work year to the total number of employee-year observations in the category.  Limiting data to full-time observations within the GS pay plan, the logistic regression model\\[-14pt]
+In addition to studying disparities in pay, human capital researchers are interested in measuring possible disparities in promotion that are associated with gender or race.  For the federal employee, OPM defines promotion as a positive change in grade and, since their data set has one observation per employee per year, proportion employees promoted per year within a given category (of, say, sex, race, grade, and age) can be computed as the ratio of the number of observations (employees) with increase in grade since their most recent work year to the total number of observations in the category for a given year.  Limiting data to full-time observations within the GS pay plan, the logistic regression model\\[-14pt]
 
 \begin{equation} \mest{p}=f(\mest{\beta}_{sex}sex+\mest{\beta}_{race}race+\mest{\beta}_{grade}grade+\mest{\beta}_{age}age)
 \label{model:LogisticPromotion}
 \end{equation}\\[-20pt]
 
-estimates the proportion of employees promoted per year within each distinct group of sex, race, grade and age.\footnote{The GS pay plan has numeric grades, which are convenient for identifying increases.  Also, GS, full-time observations account for approximately 75\% of observations supplied by OPM.} \footnote{Since observations are restricted to those for the GS pay plan, promotions to or from other pay plans are excluded here.} \footnote{Age is used as a proxy for work experience.}  Figures \ref{figure:PromotionSexRaceageGS3-7Observed} through \ref{figure:PromotionSexRaceageGS13-17Observed} plot observed proportion employees promoted per year as a function of age, given sex, race, and grade for grades 3 through 7, grades 8 through 12, and grades 13 through 17, respectively.  Figures \ref{figure:PromotionSexRaceageGS3-7Observed} through \ref{figure:PromotionSexRaceageGS13-17Observed} plot proportions estimated from model (\ref{model:LogisticPromotion}) fit to observed proportions for grades 3 through 7, grades 8 through 12, and grades 13 through 17, respectively.\\
+estimates the proportion of employees promoted per year within each distinct group of sex, race, grade and age.\footnote{The GS pay plan has numeric grades, which are convenient for identifying increases.  Also, GS, full-time observations account for approximately 75\% of observations supplied by OPM.} \footnote{Since observations are restricted to those for the GS pay plan, promotions to or from other pay plans are excluded here.} \footnote{Age is used as a proxy for work experience.}  Figures \ref{figure:PromotionSexRaceageGS3-7Observed} through \ref{figure:PromotionSexRaceageGS13-17Observed} plot observed proportion employees promoted per year as a function of age, given sex, race, and grade for grades 3 through 7, grades 8 through 12, and grades 13 through 17, respectively.  Figures \ref{figure:PromotionSexRaceageGS3-7Model} through \ref{figure:PromotionSexRaceageGS13-17Model} plot proportions estimated from model (\ref{model:LogisticPromotion}) fit to observed proportions for grades 3 through 7, grades 8 through 12, and grades 13 through 17, respectively.\\
 
 Observations:
+\begin{itemize}
+    \item Patterns of proportion promoted as measured in the authentic data are generally maintained in corresponding sex, race, and grade categories within the synthetic data.  Male proportions for the two data sets (x symbols) generally appear in the same vicinity, as do female proportions (circle symbols).
+    \item Decrease in proportion promoted with respect to age is similar between data sets in most sex, race, and grade categories.  Rates for younger employees are relatively high and trends appear asymptotic with increase in age.
+    \item Important findings, such as greater rates of promotion to grades 5 and 6 for males in all races, as observed in the authentic data, are reproduced in the synthetic data.
+    \item The feature of interaction between sex and age observed for races Hispanic and white for grade 3 in the authentic data is also present in the synthetic data.
+    \item The unusually flat curves for all races in grade 8, with more typical asymptotic curves for grades 7 and 9, as observed in the authentic data, is apparent in the synthetic proportions.
+    \item The gradual flattening of proportion promoted with respect to age in all races for grades beyond 9, as observed in the authentic data, is represented in synthetic proportions.
+    \item The logistic regression estimates (plotted in figures \ref{figure:PromotionSexRaceageGS3-7Model} through \ref{figure:PromotionSexRaceageGS13-17Model}) generated from synthetic data generally provide meaningful insight into authentic relationships of promotion rates to sex, race, age, grade, and age.  This is illustrated by the general proximity of lines for male categories (dashed, one for authentic, one for synthetic) and general separation from those for female categories (solid lines, one for each data set).
+    \item Using the synthetic models, important findings of increased proportion promoted by sex (males in all races, grade 5) and interaction of sex and age (all races, grades 3, 4, 8, and 9), as measured in the authentic data, are also observed in the synthetic data.
+    \item General asymptotic trends and flattening with respect to age for higher grades are replicated in the synthetic data models.
+    
+\end{itemize}
 
 \clearpage
 
@@ -1131,16 +1143,16 @@ Observations:
 
 \section{Longitudinal Employee Careers}
 
-Relationships of human capital factors such as experience, education, and demographics to agency and occupation employed in, along with patterns of change through time, are important areas of study.  To assess the U.S. federal employee's readiness to develop and execute policy, along with associated costs, researchers model promotion, changes in distribution of professional class and grade within subpopulations, and patterns of mobility between agencies and occupations.  Some models include ancillary data to compare human capital profiles of public sector employees to compatible workers in the private sector.  Some measure interaction between events within and without official governmental programs.  For the synthetic data to be useful in these contexts, longitudinal relationships must be maintained and, in fact, it is with agency and year that the synthesis algorithm begins.  As seen earlier, in table \ref{table:DataSetReview}, the synthetic data have slightly more observations than the authentic data, but with slightly fewer employees and contain no new year, agency, occupation combinations.  Figure \ref{figure:TotalObsProportions} plots the ratio, by year, of synthetic observations to total authentic observations.  The dotted line is the ratio of total synthetic to total authentic observations.  The solid line is the accumulated proportion, by year, of authentic observations within agency that appear in the synthetic data.  These ratios deduct for under-representation and omit over-represented observations by agency.  Note that duplicate year, employee ID, and agency in the authentic data are reduced to a single instance.\\
+Relationships of human capital factors such as experience, education, and demographics to agency and occupation employed in, along with patterns of change through time, are important areas of study.  To assess the U.S. federal employee's readiness to develop and execute policy, along with associated costs, researchers model promotion, changes in distribution of professional class and grade within subpopulations, and patterns of mobility between agencies and occupations.  Some models include ancillary data to compare human capital profiles of public sector employees to compatible workers in the private sector.  Some measure interaction between events or conditions within and without official governmental programs.  For the synthetic data to be useful in these contexts, longitudinal relationships must be maintained and, in fact, it is with agency and year that the synthesis algorithm begins.  As seen earlier, in table \ref{table:DataSetReview}, the synthetic data have slightly more observations than the authentic data, but with slightly fewer employees and no new year, agency, occupation combinations.  Figure \ref{figure:TotalObsProportions} plots the ratio, by year, of synthetic observations to corresponding authentic observations.  The dotted line is the ratio of total synthetic to total authentic observations.  The solid line is the accumulated proportion, by year, of authentic observations within agency that appear in the synthetic data.  These ratios deduct for under-representation and omit over-represented observations by agency.  Note that duplicate year, employee ID, and agency in the authentic data are reduced to a single instance.\\
 
-Observations:  There exists an additional, approximate 1.25\% total synthetic records per year, but observation frequency proportions within year and agency remain high at approximately 98\% of authentic counts.  Although cross-sectional, since annual totals are independent, it appears that the volume of synthetic observations by agency in each year is consistent with that needed to accurately represent careers in the authentic data.  A slight, gradual increase in proportion observations within agency by year is apparent. 
+Observations:  There exists an additional, approximate 1.25\% total synthetic records per year, but frequency proportions within year and agency remain high at approximately 98\% of authentic counts.  Although cross-sectional, since annual totals are independent, it appears that the volume of synthetic observations by agency and year is consistent with that needed to accurately represent authentic careers.  A slight, gradual decrease in proportion observations by agency and year is apparent from 1988 to 2000, followed by gradual increase. 
 
 \vspace{2pt}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=5.25in, trim={0 0.85in 0 0.5in}, clip]{TotalObsProportions.png}
-    \caption{Annual ratios of synthetic to authentic observations.  Dotted line is the ratio of total synthetic to total authentic observations.  Solid line is the accumulated proportion, by year, of authentic observations within agency that appear in the synthetic data.}
+    \caption{Annual ratios of synthetic to authentic observations.  year on x-axis.  Dotted line is the ratio of total synthetic to total authentic observations.  Solid line is the accumulated proportion, by year, of authentic observations within agency that appear in the synthetic data.}
     \label{figure:TotalObsProportions}
 \end{figure}
 
@@ -1148,39 +1160,29 @@ Observations:  There exists an additional, approximate 1.25\% total synthetic re
 
 \subsection{Careers by Consecutive Year Agencies}
 
-\textit{Explanation}\\
+Figure \ref{figure:CareerProportionsAgency} plots the proportion of authentic employee career segments, agencies employed in during n consecutive years, that appear in the synthetic data.  One line is plotted for each n from one to twenty four, with points on each line indicating the proportion of n-length agency tuples beginning in the corresponding year on the x-axis.  In computing proportions, observation frequencies are accumulated in each data set for each unique sequence of consecutive year agencies.  Synthetic observations in excess of corresponding authentic observations are omitted, so that over and under representation reduce proportions.  We should expect proportions to decrease as the number of consecutive years increases, indicating less agreement between data sets for lengthier careers that involve unique patterns of agency mobility.  Extremely high rates of agreement for long career segments would pose privacy disclosure risks, something the synthetic data are intended to reduce.\\
 
-Observations:  Line corresponding to n=1 is identical to proportion authentic year, agency observations in synthetic data in figure \ref{figure:TotalObsProportions} (solid line).  This is because single year career segments are equivalent to cross-sectional proportions by year.\\
-
-Patterns of line for n years influences shape of lines for subsequent n.  \textit{Explain}\\
-
-Proportions above 0.88, even for 24 year careers.\\
+Observations:  The line corresponding to n=1 is identical to the solid line of figure \ref{figure:TotalObsProportions}.  This is because single year career segments are equivalent to cross-sectional proportions by year.  The shape of lines for years beyond a given n are influenced by the shape of the line for n.  This is because smaller segments (lesser n) compose sub-segments of lines for larger n; patterns of agreement (annual sequences of high or low proportion) for larger n are constrained by those observed in lines for lower n.  We do observe a general reduction in proportion agreement as n increases, but proportions remain near or above 0.9, indicating reasonable utility of synthetic agency based careers, even for lengthy career segments.  A curious ridge is apparent, composed of one to three year local increases appearing approximately 75\% into the line for most n.\\
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=5.25in, trim={0 0 0 0.75in}, clip]{CareerProportionsAgency.png}
-    \caption{Proportion of authentic careers represented in synthetic data.  Careers based on agencies employed in during n consecutive years.  One line for each n from 1 to 24.  Points on line represent proportion for n-year segment beginning in corresponding year on x-axis.}
+    \includegraphics[width=5.25in, trim={0 0.25in 0 0.75in}, clip]{CareerProportionsAgency.png}
+    \caption{Proportion of authentic n-year agency based careers represented in synthetic data.  One line for each n from one to twenty four.  Points on lines represent proportion for n-year segment beginning in corresponding year on the x-axis.}
     \label{figure:CareerProportionsAgency}
 \end{figure}
 
 \clearpage
 
-\subsection{Careers by Consecutive Year Agency and Occupation}
+\subsection{Careers by Agency and Occupation in Consecutive Years}
 
-\textit{Explanation}\\
+Figure \ref{figure:CareerProportionsAgencyOcc} plots the proportion of authentic employee career segments, agencies and occupations employed in during n consecutive years, that appear in the synthetic data.  One line is plotted for each n from one to twenty four, with points on each line indicating the proportion of n-length agency, occupation tuples beginning in the corresponding year on the x-axis.  In computing proportions, observation frequencies are accumulated in each data set for each unique sequence of consecutive year agency, occupation combinations.  Synthetic observations in excess of corresponding authentic observations are omitted, so that over and under representation reduce proportions.  We should expect, for corresponding n, proportions to be below those observed for simple agency based careers, since agreement in both agency and occupation incurs greater difficulty.  We also expect a decrease in proportion as n increases, indicating less agreement between data sets for lengthier careers that involve unique patterns of agency and occupation mobility.  Extremely high rates of agreement for long career segments would pose privacy disclosure risks, something the synthetic data are intended to reduce.\\
 
-Observations:  Proportions generally below those for careers based solely on agency.\\
-
-Lines generally more flat than those for agency alone, particularly for small n.\\
-
-Proportions above 0.65, indicating possible limitation to accurate modeling of careers, particularly lengthy ones.\\
-
-Curious ridge.\\
+Observations:  As with agency based careers, the shape of lines for years beyond a given n are influenced by the shape of the line for n years.  We do observe n-year proportions below corresponding agency based career proportions along with the expected reduction in proportion agreement as n increases.  Proportions for all n, except 1 and 2, are below 0.9, indicating a limit to synthetic data utility in modeling careers, particularly lengthy ones.  The ridge mentioned in the previous section appears more pronounced when occupation is included in the definition of career.\\
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=5.25in, trim={0 0 0 0.75in}, clip]{CareerProportionsAgencyOcc.png}
-    \caption{Proportion of authentic careers represented in synthetic data.  Careers based on agencies and occupations employed in during n consecutive years.  One line for each n from 1 to 24.  Points on line represent proportion for n-year segment beginning in corresponding year on x-axis.}
+    \includegraphics[width=5.25in, trim={0 0.25in 0 0.75in}, clip]{CareerProportionsAgencyOcc.png}
+    \caption{Proportion of authentic n-year agency, occupation based careers represented in synthetic data.  One line for each n from one to twenty four.  Points on lines represent proportion for n-year segment beginning in corresponding year on the x-axis.}
     \label{figure:CareerProportionsAgencyOcc}
 \end{figure}
 
