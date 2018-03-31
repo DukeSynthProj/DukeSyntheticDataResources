@@ -42,7 +42,9 @@
 
 \vspace{20pt}
 
-The following is excerpted from work done as part of the Synthetic Data Project at Duke University to validate the DIBBS synthetic federal employee data set with corresponding authentic data supplied by the U.S. Office of Personnel Management (OPM).\footnote{A complete description of both data sets and sources is available in the main document that the current document supplements.}  The selection here highlights two and three level covariate relationships, especially involving variables important to human capital research such as sex, race, age, education, agency, occupation, year, and pay.  In assessing similarity of the data sets, emphasis is placed on utility, or the degree to which answers to meaningful research questions obtained from use of synthetic data agree with those from use of corresponding authentic data.  Graphs and tables representing synthetic data contain the text ``DIBBS" while those for authentic data contain either ``OPM" or ``JdF."\footnote{``JdF" is nomenclature for a particular FOIA request that resulted in receipt of authentic data from OPM, which was used to generate synthetic data.}  All codes and definitions are taken from the U.S. Office of Personnel Management Guide to Data Standards \citep{OPMGDS}.  For additional information and guidance on use and interpretation of data made available by OPM, see \citep{OPMDataAnalysis}.\\
+The following is excerpted from work done as part of the Synthetic Data Project at Duke University to validate the DIBBS synthetic federal employee data set with corresponding authentic data supplied by the U.S. Office of Personnel Management (OPM).\footnote{A complete description of both data sets and sources is available in the main document that the current document supplements.}  The selection here highlights multiple level covariate relationships and concentrates on those involving variables important to human capital research such as sex, race, age, education, agency, occupation, year, and pay.  In assessing similarity of the data sets, emphasis is placed on utility, or the degree to which answers to meaningful research questions obtained from use of synthetic data agree with those from use of corresponding authentic data.  Graphs and tables representing synthetic data contain the text ``DIBBS" while those for authentic data contain either ``OPM" or ``JdF."\footnote{``JdF" is nomenclature for a particular FOIA request that resulted in receipt of authentic data from OPM, which was used to generate synthetic data.}  All codes and definitions are taken from the U.S. Office of Personnel Management Guide to Data Standards \citep{OPMGDS}.  For additional information and guidance on use and interpretation of data made available by OPM, see \citep{OPMDataAnalysis}.\\
+
+Note:  To minimize the risk of disclosing private information on individual federal employees, data categories and cells representing fewer than one hundred observations have been omitted or masked in the graphs and tables that follow.\footnote{Although OPM's on-line data repository, FedScope, redacts data for cells with five or fewer observations, we have chosen a larger threshold for additional protection \citep{OPMFedScope}.}\\
 
 \clearpage
 
@@ -222,10 +224,10 @@ Pay plan and occupation characterize an employee's job classification and servic
 
 Observations:  Overlapping or nearness of lines indicates equality of cumulative mass for corresponding levels of occupation within pay plan.  Near identical distribution is observed for high frequency pay plans GS, WG, GM, and VN, which account for more than 95\% of observations, indicating overall close agreement between data sets.  Increasing departure observed as number of observations decreases.\\
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=6.25in, trim={0 1in 0 0.75in}, clip]{CMFOccupationPayPlan61.png}
-    \caption{Cumulative mass (observations) by occupation within pay plan.  Pay plan set one.  Synthetic data represented by dashed line, authentic by solid line.}
+    \includegraphics[width=5.85in, trim={0 0.75in 0 0.75in}, clip]{CMFOccupationPayPlan61.png}
+    \caption{Cumulative mass (observations) by occupation within pay plan.  Pay plan set one.  Synthetic data represented by dashed line, authentic by solid line.  Occupation on x-axis.}
     \label{figure:CMFOccupationPayPlan1}
 \end{figure}
 
@@ -233,8 +235,8 @@ Observations:  Overlapping or nearness of lines indicates equality of cumulative
 
 \begin{figure}[]
     \centering
-    \includegraphics[width=6.25in, trim={0 1in 0 0.75in}, clip]{CMFOccupationPayPlan141.png}
-    \caption{Cumulative mass (observations) by occupation within pay plan.  Pay plan set 2. Synthetic data represented by dashed line, authentic by solid line.}
+    \includegraphics[width=5.85in, trim={0 0.75in 0 0.75in}, clip]{CMFOccupationPayPlan141.png}
+    \caption{Cumulative mass (observations) by occupation within pay plan.  Pay plan set two. Synthetic data represented by dashed line, authentic by solid line.  Occupation on x-axis.}
     \label{figure:CMFOccupationPayPlan2}
 \end{figure}
 
@@ -242,7 +244,7 @@ Observations:  Overlapping or nearness of lines indicates equality of cumulative
 
 \section{Distribution of Grade by Joint Combinations of Agency, Occupation, Education, and Supervisor Status}
 
-Federal employee pay classification consists of a pay plan, grade, and step rate.  Since employee pay is largely determined by grade and promotions are detected by change in grade, it is important for the synthetic data to accurately reflect authentic proportions of observations by grade within joint combinations of critical human capital variables.\footnote{Although pay rate schedules exist for each pay plan, exceptions to published rates of pay may apply when an employee is transferred into a position that requires a grade adjustment.}  Observations are limited to GS pay plan, full-time.
+Federal employee pay classification consists of a pay plan, grade, and step rate.  Since employee pay is largely determined by grade and promotions are detected by change in grade, it is important for the synthetic data to accurately reflect authentic proportions of observations by grade within joint combinations of critical human capital variables.\footnote{Although pay rate schedules exist for each pay plan, exceptions to published rates of pay may apply when an employee is transferred into a position that requires a grade adjustment.}  Observations are limited to GS pay plan, full-time.\\
 
 Figure \ref{figure:JdFDIBBSGSFullTimeGradeAdminProfessionalAgency} compares synthetic and authentic observation frequencies within joint categories of agency, occupational category, and grade.  Administrative and professional occupational categories are combined and appear in the lower plot of the panel and remaining GS categories (technical, clerical, and other white collar) appear as a group in the upper plot.  Each agency (x-axis) has two columns of dots, one on the left for authentic data and one on the right for synthetic data.  The size of each dot is scaled to represent the number of observations in the corresponding grade listed on the y-axis.  Dot sizes range from small (less than 1,000 observations) to large (more than 250,000 observations).  Total observation counts by agency are listed in rows at the top of each plot, ``n(JdF)" indicating authentic observations, ``n(DIBBS)" indicating synthetic.  Note that the graphs shown are for a sequence of representative agencies.  Those for remaining agencies show similar patterns.\\
 
@@ -264,16 +266,17 @@ Observations:  Within the resolution of dot size, joint frequencies of agency, o
     \centering
     \begin{subfigure}{1\textwidth}
         \centering
-        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeAdminProfessionalAgency61.png}
+        \includegraphics[width=6in, trim={0 200px 0 165px}, clip]{JdFDIBBSGSFullTimeGradeAdminProfessionalAgency61.png}
         \caption{Agencies GG through KH}
-        \vspace{10pt}
+        \vspace{20pt}
     \end{subfigure}
     \begin{subfigure}{1\textwidth}
         \centering
-        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeAdminProfessionalAgency101.png}
+        \includegraphics[width=6in, trim={0 200px 0 165px}, clip]{JdFDIBBSGSFullTimeGradeAdminProfessionalAgency101.png}
         \caption{Agencies OM through SZ}
+        \vspace{10pt}
     \end{subfigure}
-    \caption{Distribution of grade by agency.  Occupational categories Admin/Professional vs. non Admin/Professional.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).}
+    \caption{Distribution of grade by agency.  Occupational categories Admin/Professional vs. non Admin/Professional.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).  Agencies on x-axis.}
     \label{figure:JdFDIBBSGSFullTimeGradeAdminProfessionalAgency}
 \end{figure}
 
@@ -283,16 +286,17 @@ Observations:  Within the resolution of dot size, joint frequencies of agency, o
     \centering
     \begin{subfigure}{1\textwidth}
         \centering
-        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeCollegeAgency21.png}
+        \includegraphics[width=6in, trim={0 200px 0 165px}, clip]{JdFDIBBSGSFullTimeGradeCollegeAgency21.png}
         \caption{Agencies BT through EC}
-        \vspace{10pt}
+        \vspace{20pt}
     \end{subfigure}
     \begin{subfigure}{1\textwidth}
         \centering
-        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeCollegeAgency61.png}
+        \includegraphics[width=6in, trim={0 200px 0 165px}, clip]{JdFDIBBSGSFullTimeGradeCollegeAgency61.png}
         \caption{Agencies GG through KH}
+        \vspace{10pt}
     \end{subfigure}
-    \caption{Distribution of grade by agency.  College education vs. non-college.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).}
+    \caption{Distribution of grade by agency.  College education vs. non-college.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).  Agencies on x-axis.}
     \label{figure:JdFDIBBSGSFullTimeGradeCollegeAgency}
 \end{figure}
 
@@ -302,16 +306,17 @@ Observations:  Within the resolution of dot size, joint frequencies of agency, o
     \centering
     \begin{subfigure}{1\textwidth}
         \centering
-        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeSupervisoryStatusAgency21.png}
+        \includegraphics[width=6in, trim={0 200px 0 165px}, clip]{JdFDIBBSGSFullTimeGradeSupervisoryStatusAgency21.png}
         \caption{Agencies BT through EC}
-        \vspace{10pt}
+        \vspace{20pt}
     \end{subfigure}
     \begin{subfigure}{1\textwidth}
         \centering
-        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeSupervisoryStatusAgency61.png}
+        \includegraphics[width=6in, trim={0 200px 0 165px}, clip]{JdFDIBBSGSFullTimeGradeSupervisoryStatusAgency61.png}
         \caption{Agencies GG through KH}
+        \vspace{10pt}
     \end{subfigure}
-    \caption{Distribution of grade by agency and supervisor status.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).}
+    \caption{Distribution of grade by agency and supervisor status.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).  Agencies on x-axis.}
     \label{figure:JdFDIBBSGSFullTimeGradeSupervisoryStatusAgency}
 \end{figure}
 
@@ -321,16 +326,17 @@ Observations:  Within the resolution of dot size, joint frequencies of agency, o
     \centering
     \begin{subfigure}{1\textwidth}
         \centering
-        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeAdminProfessionalOccupation1.png}
+        \includegraphics[width=6in, trim={0 200px 0 165px}, clip]{JdFDIBBSGSFullTimeGradeAdminProfessionalOccupation1.png}
         \caption{Occupations 0006 through 0082}
-        \vspace{10pt}
+        \vspace{20pt}
     \end{subfigure}
     \begin{subfigure}{1\textwidth}
         \centering
-        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeAdminProfessionalOccupation21.png}
+        \includegraphics[width=6in, trim={0 200px 0 165px}, clip]{JdFDIBBSGSFullTimeGradeAdminProfessionalOccupation21.png}
         \caption{Occupations 0083 through 0136}
+        \vspace{10pt}
     \end{subfigure}
-    \caption{Distribution of grade by occupation.  Occupational categories Admin/Professional vs. non Admin/Professional.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).}
+    \caption{Distribution of grade by occupation.  Occupational categories Admin/Professional vs. non Admin/Professional.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).  Occupations on x-axis.}
     \label{figure:JdFDIBBSGSFullTimeGradeAdminProfessionalOccupation}
 \end{figure}
 
@@ -340,16 +346,17 @@ Observations:  Within the resolution of dot size, joint frequencies of agency, o
     \centering
     \begin{subfigure}{1\textwidth}
         \centering
-        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeCollegeOccupation1.png}
+        \includegraphics[width=6in, trim={0 200px 0 165px}, clip]{JdFDIBBSGSFullTimeGradeCollegeOccupation1.png}
         \caption{Occupations 0006 through 0082}
-        \vspace{10pt}
+        \vspace{20pt}
     \end{subfigure}
     \begin{subfigure}{1\textwidth}
         \centering
-        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeCollegeOccupation81.png}
+        \includegraphics[width=6in, trim={0 200px 0 165px}, clip]{JdFDIBBSGSFullTimeGradeCollegeOccupation81.png}
         \caption{Occupations 0305 through 0351}
+        \vspace{10pt}
     \end{subfigure}
-    \caption{Distribution of grade by occupation.  College education vs. non-college.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).}
+    \caption{Distribution of grade by occupation.  College education vs. non-college.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).  Occupations on x-axis.}
     \label{figure:JdFDIBBSGSFullTimeGradeCollegeOccupation}
 \end{figure}
 
@@ -359,16 +366,17 @@ Observations:  Within the resolution of dot size, joint frequencies of agency, o
     \centering
     \begin{subfigure}{1\textwidth}
         \centering
-        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeSupervisoryStatusOccupation1.png}
+        \includegraphics[width=6in, trim={0 200px 0 165px}, clip]{JdFDIBBSGSFullTimeGradeSupervisoryStatusOccupation1.png}
         \caption{Occupations 0006 through 0082}
-        \vspace{10pt}
+        \vspace{20pt}
     \end{subfigure}
     \begin{subfigure}{1\textwidth}
         \centering
-        \includegraphics[width=6in, trim={0 0.55in 0 0.75in}, clip]{JdFDIBBSGSFullTimeGradeSupervisoryStatusOccupation41.png}
+        \includegraphics[width=6in, trim={0 200px 0 165px}, clip]{JdFDIBBSGSFullTimeGradeSupervisoryStatusOccupation41.png}
         \caption{Occupations 0140 through 0205}
+        \vspace{10pt}
     \end{subfigure}
-    \caption{Distribution of grade by agency and supervisor status.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).}
+    \caption{Distribution of grade by agency and supervisor status.  Authentic on left, synthetic on right.  Dot size small (n$<$5,000) to large (n$>$250,000).  Occupations on x-axis.}
     \label{figure:JdFDIBBSGSFullTimeGradeSupervisoryStatusOccupation}
 \end{figure}
 
@@ -396,7 +404,7 @@ Observations:  Although each data set is represented in each graph, a single str
 \begin{figure}[h]
     \centering
     \includegraphics[width=6in, trim={0 0.8in 0 1.2in}, clip]{JdFDIBBSBasicPayDistribution.png}
-    \caption{Basic pay marginal distribution for top eight agencies.  Dashed line for synthetic data, solid line for authentic.}
+    \caption{Basic pay marginal distribution for top eight agencies.  Dashed line for synthetic data, solid line for authentic.  Basic pay  (in thousands) on x-axis.}
     \label{figure:JdFDIBBSBasicPayDistribution}
 \end{figure}
 
@@ -500,7 +508,7 @@ Observations:  Median pay and inter-quartile ranges appear consistent between da
         \caption{Occupations 0083 through 0135}
         \vspace{10pt}
     \end{subfigure}
-    \caption{Basic pay distribution by occupation and supervisor status.  All agencies combined.  Authentic boxes on left, synthetic on right.}
+    \caption{Basic pay distribution by occupation and supervisor status.  All agencies combined.  Authentic boxes on left, synthetic on right.  Occupation on x-axis.}
     \label{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation1}
 \end{figure}
 
@@ -520,7 +528,7 @@ Observations:  Median pay and inter-quartile ranges appear consistent between da
         \caption{Occupations 0204 through 0302}
         \vspace{10pt}
     \end{subfigure}
-    \caption{Basic pay distribution by occupation and supervisor status.  All agencies combined.  Authentic boxes on left, synthetic on right.}
+    \caption{Basic pay distribution by occupation and supervisor status.  All agencies combined.  Authentic boxes on left, synthetic on right.  Occupation on x-axis.}
     \label{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation2}
 \end{figure}
 
@@ -540,7 +548,7 @@ Observations:  Median pay and inter-quartile ranges appear consistent between da
         \caption{Occupations 0347 through 0399}
         \vspace{10pt}
     \end{subfigure}
-    \caption{Basic pay distribution by occupation and supervisor status.  All agencies combined.  Authentic boxes on left, synthetic on right.}
+    \caption{Basic pay distribution by occupation and supervisor status.  All agencies combined.  Authentic boxes on left, synthetic on right.  Occupation on x-axis.}
     \label{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation3}
 \end{figure}
 
@@ -558,7 +566,7 @@ Observations:  Median pay and inter-quartile ranges appear consistent between da
         \caption{Occupations 3103 through 3511 (trades)}
         \vspace{10pt}
     \end{subfigure}
-    \caption{Basic pay distribution by occupation and supervisor status.  All agencies combined.  Authentic boxes on left, synthetic on right.}
+    \caption{Basic pay distribution by occupation and supervisor status.  All agencies combined.  Authentic boxes on left, synthetic on right.  Occupation on x-axis.}
     \label{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation4}
 \end{figure}
 
@@ -578,7 +586,7 @@ Observations:  Median pay and inter-quartile ranges appear consistent between da
         \caption{Occupations 3725 through 3911 (trades}
         \vspace{10pt}
     \end{subfigure}
-    \caption{Basic pay distribution by occupation and supervisor status.  All agencies combined.  Authentic boxes on left, synthetic on right.}
+    \caption{Basic pay distribution by occupation and supervisor status.  All agencies combined.  Authentic boxes on left, synthetic on right.  Occupation on x-axis.}
     \label{figure:JdFDIBBSBasicPaySupervisoryStatusOccupation5}
 \end{figure}
 
@@ -622,9 +630,7 @@ Observation:  This four-way comparison (sex, race, education, and year) confirms
 
 Figures \ref{figure:GenderProportionLogisticModelFYRaceAgeA} through \ref{figure:GenderProportionLogisticModelFYRaceAgeE}, show for each race, proportion female employees by age and year.  Fitted lines are logistic regression models.\\
 
-Observation:  These four-way comparisons (sex, race, age, and year) confirm good representation in synthetic data of gender proportion among important variable combinations in the authentic data.  Fitted logistic regression models have nearly identical trends through fiscal years.\\
-
-Logistic models reveal agreement in trends between data sets.
+Observation:  These four-way comparisons (sex, race, age, and year) confirm good representation in synthetic data of gender proportion among important variable combinations in the authentic data.  Through the entire range of fiscal years, logistic regression models derived from synthetic data closely approximate those obtained using authentic data.\\
 
 \vspace{20pt}
 
@@ -693,7 +699,7 @@ Observation:  Agreement for large count occupations is indicated by proximity of
         \caption{Occupations 0136 through 0302}
         \vspace{10pt}
     \end{subfigure}
-    \caption{Proportion female observations by occupation.  All agencies combined.  One synthetic and one authentic point per occupation.}
+    \caption{Proportion female observations by occupation.  All agencies combined.  One synthetic and one authentic point per occupation.  Occupation on x-axis.}
     \label{figure:JdFDIBBSOccupationProportionBar1}
 \end{figure}
 
@@ -713,7 +719,7 @@ Observation:  Agreement for large count occupations is indicated by proximity of
         \caption{Occupations 0401 through 0512}
         \vspace{10pt}
     \end{subfigure}
-    \caption{Proportion female observations by occupation.  All agencies combined.  One synthetic and one authentic point per occupation.}
+    \caption{Proportion female observations by occupation.  All agencies combined.  One synthetic and one authentic point per occupation.  Occupation on x-axis.}
     \label{figure:JdFDIBBSOccupationProportionBar2}
 \end{figure}
 
@@ -733,7 +739,7 @@ Observation:  Agreement for large count occupations is indicated by proximity of
         \caption{Occupations 3513 through 3911 (trades)}
         \vspace{10pt}
     \end{subfigure}
-    \caption{Proportion female observations by occupation.  All agencies combined.  One synthetic and one authentic point per occupation.}
+    \caption{Proportion female observations by occupation.  All agencies combined.  One synthetic and one authentic point per occupation.  Occupation on x-axis.}
     \label{figure:JdFDIBBSOccupationProportionBar3}
 \end{figure}
 
@@ -753,7 +759,7 @@ Observation:  Agreement for large count occupations is indicated by proximity of
         \caption{Occupations 4607 through 5306 (trades)}
         \vspace{10pt}
     \end{subfigure}
-    \caption{Proportion female observations by occupation.  All agencies combined.  One synthetic and one authentic point per occupation.}
+    \caption{Proportion female observations by occupation.  All agencies combined.  One synthetic and one authentic point per occupation.  Occupation on x-axis.}
     \label{figure:JdFDIBBSOccupationProportionBar4}
 \end{figure}
 
@@ -895,7 +901,7 @@ Disparity in pay attributed to gender is an important and common topic in human 
 
 where $y$ is a particular quantile of log(basic pay).  Figure \ref{figure:GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06} plots estimates of gender effect ($\mest{\beta}_s$) from model (\ref{model:GenderPayQuantile}) fit to annual subsets of observations for quantiles 0.1, 0.5, and 0.9.\\
 
-Observations:  Estimates of gender effect ($\mest{\beta}$) tend to be greater for quantiles 0.5 and 0.9 than for 0.1 in all years.  This indicates a tendency, for median and high pay positions, of greater disparity between women and men with common occupation, education, and experience (age) profiles and, although with some systematic difference to authentic estimates, estimates from the synthetic data identify this important feature.  Additionally, the gradual trend toward parity ($\mest{\beta}_s$ estimates approach 0) as years advance that is observed in authentic data is also represented in the synthetic data.  Although parity appears to have been achieved in the final year for quantile 0.1, it remains at approximately -0.01 and -0.02 for quantiles 0.5 and 0.9, respectively, indicating an increasing lag of disparity as pay level increases.  This important result is also apparent in the synthetic data.
+Observations:  Estimates of gender effect ($\mest{\beta}$) tend to be greater for quantiles 0.5 and 0.9 than for 0.1 in all years.  This indicates a tendency, for median and high pay positions, of greater disparity between women and men with common occupation, education, and experience (age) profiles and, although with some systematic difference to authentic estimates, estimates from the synthetic data identify this important feature.  Additionally, the gradual trend toward parity ($\mest{\beta}$ estimates approach 0 as years advance) that is observed in the authentic data is also represented in the synthetic data.  Although parity appears to have been achieved in the final year for quantile 0.1, it remains at approximately -0.01 and -0.02 for quantiles 0.5 and 0.9, respectively, indicating an increasing lag of disparity at higher pay levels.  This important result is also apparent in the synthetic data.
 
 \begin{figure}[h]
     \centering
@@ -903,6 +909,94 @@ Observations:  Estimates of gender effect ($\mest{\beta}$) tend to be greater fo
     \caption{Pay disparity gender effect quantile estimates.  Change over time.  Upper line represents synthetic data, lower line authentic data.}
     \label{figure:GenderPayDifferentialQuantileRegressionAgeRaceEdPanelv0-06}
 \end{figure}
+
+\clearpage
+
+\section{Race Pay Disparity Fixed Effects Model - Effect of Sub-setting on Regression Coefficients}
+
+The study of wage disparity by race is an important topic in human capital research and by using subsets of OPM data, analysts are able to  measure disparity within specific years, agencies, occupations, or combinations of factors.\footnote{Example models and verification measures presented in the main paper analyze wage disparity by race, controlling for factors such as year, agency, occupation, age, and education.}  Since, with regression models, an increase in parameter estimate variance is expected as subset observation count decreases, an assessment of nearness of estimates obtained using compatible subsets of synthetic and authentic data is of interest.\footnote{Recall that, assuming homoskedasticity of residuals, the variances of regression parameter estimates are on the diagonal of the covariance matrix,  $\text{Cov}(\mest{\beta})=\sigma^2(\mtm{X}{X})^{-1}$.  Given two random samples of observations from a single data set, $\bm{X}_1$ with \textit{n} rows and $\bm{X}_2$ with \textit{kn} rows, $[\mtm{X}{X}]_2\approx k[\mtm{X}{X}]_1$, giving $[\mtm{X}{X}]_1[\mtm{X}{X}]^{-1}_1 = k[\mtm{X}{X}]_1(\frac{1}{k})[\mtm{X}{X}]^{-1}_1 = \textbf{I} \Rightarrow [\mtm{X}{X}]_2(\frac{1}{k})[\mtm{X}{X}]^{-1}_1 \approx \textbf{I} \Rightarrow [\mtm{X}{X}]^{-1}_2 \approx (\frac{1}{k})[\mtm{X}{X}]^{-1}_1$, so that parameter estimate variances are expected to increase for $k<1$ (smaller subset size) and decrease for $k>1$ (larger subset size).}  A general modeling strategy follows.\footnote{Excerpted from section 5.2 of the main paper.}  
+Following conventions in the literature on pay disparities, the race wage gap is estimated using linear regression techniques with a standard set of demographic and human capital predictors, running the same models on both the synthetic and confidential datasets.  The dependent variable is the natural logarithm of an employee's inflation adjusted basic pay in a given year. Basic pay is an individual's base salary and excludes any additional pay related to geographic location, award payments, or other monetary incentives paid out to employees.  The central independent variable is the race with which individual employees identify.\footnote{Regression models include indicator variables for four racial groups: American Indian/Alaska Native (AI/AN), Asian, black, and Hispanic. The omitted reference category is white.}  Also included are other variables plausibly correlated with race and pay. These include the employee's age as well as its square, and years of educational attainment after high school.  Fixed effects for the bureau (agency) in which an individual works is included to account for time-constant organizational factors that may affect wages, along with indicators for an individual's occupation to account for differences in pay structures across occupations.\\
+
+A model to estimate wage disparity by race within bureau, controlling for sex, age, education, occupation, and year is\\[-16pt]
+
+\begin{equation} y=\beta_0+\beta_{sex}+\beta_{race}+\beta_{age}age+\beta_{ag^2}age^2+\beta_{ed}education+\beta_{occ}+\beta_{year}
+\label{model:RaceDisparityFEBureau}
+\end{equation}
+
+where $y$ is the logarithm of basic pay.  When fit to a subset of data for a given bureau, the $\mest{\beta}_{race}$ estimates from this model (there are four, one for each non-reference race), measure wage disparity observed within that bureau.  The difference in corresponding $\mest{\beta}_{race}$ estimates obtained from corresponding synthetic and authentic bureau subsets provides insight into the utility of the synthetic data for race wage disparity analysis.  Figure \ref{figure:dibbs_agency_diff_lnn} plots, for each bureau having more than one hundred observations in the entire authentic data set, differences in synthetic and authentic $\mest{\beta}_{race}$ estimates against the logarithm of number of authentic observations for a bureau.  It is seen that, for low frequency bureaus, the difference in estimates is significant.\footnote{Recall that $\mest{\beta}_{race}$ estimates the expected difference in the logarithm of basic pay between a given race and the reference race.  Therefore, a $\mest{\beta}_{race}$ estimate near 0.5 implies an expected pay ratio of 1.65 between these races.  Differences in synthetic and authentic estimates of 0.5, then, indicate errors of 165\%}  However, deviations decrease as observation frequency increases and are near zero for the largest bureaus.  There does not appear to be a bias toward positive or negative deviations; it appears that change in deviation magnitude is a function of observation count.
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=6in]{dibbs_agency_diff_lnn.pdf}
+    \caption{Differences in synthetic and authentic $\mest{\beta}_{race}$ coefficients for race disparity model (\ref{model:RaceDisparityFEBureau}) fit to bureau subsets.  Bureaus with more than one hundred observations in authentic data.  Logarithm of bureau observation frequency on x-axis.}
+    \label{figure:dibbs_agency_diff_lnn}
+\end{figure}
+
+\clearpage
+
+A model to estimate wage disparity by race within occupation, controlling for sex, age, education, bureau, and year is\\[-16pt]
+
+\begin{equation} y=\beta_0+\beta_{sex}+\beta_{race}+\beta_{age}age+\beta_{ag^2}age^2+\beta_{ed}education+\beta_{bur}+\beta_{year}
+\label{model:RaceDisparityFEOcc}
+\end{equation}
+
+This is similar to model (\ref{model:RaceDisparityFEBureau}), but with occupation omitted and bureau included.  It is fit to synthetic and authentic occupation subsets for occupations with more than one hundred observations in the authentic data.  Figure \ref{figure:dibbs_occ_diff_lnn} plots the difference in computed race disparity estimates against log(authentic observation count).  Again, we see significant differences for small subsets with decreasing magnitude of difference as observation count increases.  There does not appear to be any bias toward positive or negative differences throughout the range of subset sizes.\\
+
+\vspace{20pt}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=6in]{dibbs_occ_diff_lnn.pdf}
+    \caption{Differences in synthetic and authentic $\mest{\beta}_{race}$ coefficients for race disparity model (\ref{model:RaceDisparityFEOcc}) fit to occupation subsets.  Occupations with more than one hundred observations in authentic data.  Logarithm of occupation observation frequency on x-axis.}
+    \label{figure:dibbs_occ_diff_lnn}
+\end{figure}
+
+\clearpage
+
+A model to estimate wage disparity by race within bureau, occupation, and year, controlling for sex, age, and education is\\[-16pt]
+
+\begin{equation} y=\beta_0+\beta_{sex}+\beta_{race}+\beta_{age}age+\beta_{ag^2}age^2+\beta_{ed}education
+\label{model:RaceDisparityFEBurOccYear}
+\end{equation}
+
+This is similar to models (\ref{model:RaceDisparityFEBureau}) and (\ref{model:RaceDisparityFEOcc}), but without parameters for \textit{bureau}, \textit{occupation}, and \textit{year}.  It is fit to synthetic and authentic subsets for combinations of bureau, occupation, year with more than one hundred observations in the authentic data.  Figure \ref{figure:dibbs_agencyoccyear_diff_lnn} plots the difference in computed race disparity estimates against log(authentic observation count).  Magnitudes of differences for smaller subsets are larger than in figures \ref{figure:dibbs_agency_diff_lnn} and \ref{figure:dibbs_occ_diff_lnn} due, presumably, to increased restriction of subsets (three variables instead of one), resulting in fewer observations and a reduction in estimate aggregation.\\
+
+\vspace{20pt}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=6in]{dibbs_agencyoccyear_diff_lnn.pdf}
+    \caption{Differences in synthetic and authentic $\mest{\beta}_{race}$ coefficients for race disparity model (\ref{model:RaceDisparityFEBurOccYear}) fit to bureau, occupation, year subsets.  Combinations with more than one hundred observations in authentic data.  Logarithm of observation frequency on x-axis.}
+    \label{figure:dibbs_agencyoccyear_diff_lnn}
+\end{figure}
+
+\clearpage
+
+Figures \ref{figure:dibbs_agency_diff_lnn}, \ref{figure:dibbs_occ_diff_lnn}, and \ref{figure:dibbs_agencyoccyear_diff_lnn} reveal a visual pattern of reduction in absolute difference in synthetic and authentic $\mest{\beta}_{race}$ estimates as subset size increases, but a more objective method is to estimate, from a regression model, the slope of these differences with respect to subset size.  Table \ref{table:RaceSubsetDifferenceSlope} contains, for bureau, occupation and bureau, occupation, year subsets with more than one hundred observations in the authentic data, the slope of log(absolute value of difference in $\mest{\beta}_{race}$) with respect to log(authentic subset size).  An initial observation is that all coefficients (slopes) are negative, confirming the reduction in difference with subset size.  Secondly, although t-statistics are not provided, all coefficients are more than nine times greater in magnitude than their corresponding standard errors, indicating statistical significance.  Lastly, all coefficients are on the interval [-0.488, -0.239], which means that per positive unit change in log(n), the corresponding logarithms of absolute differences $d_1$ and $d_2$ are bounded in difference by $-0.488 \le \text{log}(d_1)-\text{log}(d_2) \le -0.239$, giving $0.61 \le \frac{d_1}{d_2} \le 0.79$, indicating a change in difference of at least 21\%.  Recalling that $\mest{\beta}_{race}$ estimates are logarithms, a $d_1$ value of 0.5 indicates a 1.65 ratio of pay values and reducing this by 21\% results in a ratio of 1.30, which a significant reduction. 
+
+\vspace{20pt}
+
+\begin{table}[h]
+    \centering
+    \caption{Relationship of difference in synthetic and authentic $\mest{\beta}_{race}$ estimates to subset size.  Three subset categories, subsets with more than one hundred observations in authentic data.  Slopes computed using log(absolute value of difference in $\mest{\beta}_{race}$) as dependent variable and log(authentic subset size) as independent variable.  Standard errors in parentheses. The number of subsets (n) for each regression is different because some of the cells do not contain employees from all five races in the data, leading to no estimates for those cells.}
+    \label{table:RaceSubsetDifferenceSlope}
+    \begin{tabular}{llrrrr}
+        \hline\\[-10pt]
+        & & \multicolumn{4}{c}{Slope} \\
+        Subset-Variables & & AI/AN & Asian & Black & Hispanic \\
+        \hline\\[-6pt]
+        Bureau     & & -0.394  & -0.351  & -0.338  & -0.373  \\
+        s.e        & & (0.032) & (0.028) & (0.024) & (0.028) \\
+        n          & &   356   &   429   &   453   &   427   \\[10pt]
+        Occupation & &  -0.267 &  -0.320 &  -0.239 &  -0.287 \\
+        s.e.       & & (0.026) & (0.024) & (0.025) & (0.024) \\
+        n          & &   563   &   585   &   650   &   620   \\[10pt]
+        Bureau, Occupation, Year & &  -0.328 &  -0.429 &  -0.451 &  -0.488 \\
+        s.e.                     & & (0.008) & (0.008) & (0.008) & (0.008) \\
+        n                        & &  20,477 &  25,450 &  28,734 &  28,498 \\[4pt]
+        \hline
+    \end{tabular}
+\end{table}
 
 \clearpage
 
