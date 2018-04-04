@@ -95,7 +95,7 @@ Notes:
 \begin{itemize}
     \item Based on discussions with OPM, basic pay should never be zero.  Records with such values are considered invalid and are excluded from certain of the analyses that follow, particularly those that categorize or use basic pay as a response variable.  Records with basic pay equal to 0 were generated in the synthetic data in order to simulate actual properties of the authentic data.
     \item According to OPM, employee ID and year should be unique.  However, in the authentic data, a small proportion of duplicates are observed.  Certain of the following analyses restrict observations to a unique employee ID, year combinations.  In selecting distinct combinations, preference is given to records with non-zero basic pay.  If multiple records remain for an employee, year combination after basic pay filtering, a single record is randomly selected for the employee and year.  Synthetic records do not have duplicated ID, year combinations.
-    \item A small proportion of year, agency and year, agency, occupation combinations appearing in the authentic data do not appear in the synthetic data.  However, all combinations appearing in the synthetic data are reflected in the authentic data.  Thus, the synthetic data do not create new agency, occupation, time relationships.
+    \item A small proportion of year, agency and year, agency, occupation combinations appearing in the authentic data do not appear in the synthetic data.  Although the synthetic data do not generate new agency, occupation combinations within any year, career trajectories (multiple year agency, occupation sequences) are created that do not appear in the authentic data.
 \end{itemize}
 
 \clearpage
